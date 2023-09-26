@@ -1,24 +1,24 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
+## アプリケーション名
+iWell  
+## アプリケーションの概要
+備品・在庫管理者が効率的に棚卸や数量管理ができ、他ユーザーにも情報をスムーズに共有できる。
+## URL
+## テスト用アカウント
+* Basic認証パスワード：1234
+* Basic認証ID：user
 * ...
+* ...
+## 利用方法
+### 〇〇
+### 〇〇
+## アプリケーションを作成した背景
+## 洗い出した要件
+## 実装した機能についての画像やGIF及びその説明
+## 実装予定の機能
+## データベース設計
+## 画面遷移図
+## 開発環境
+## ローカルでの動作方法
+## 工夫したポイント
+## 改善点
+## 制作時間

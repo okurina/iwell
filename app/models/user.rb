@@ -9,7 +9,7 @@ class User < ApplicationRecord
     validates :department
   end
 
-  validates :login_id, presence: true, numericality: { message: 'には8桁の半角数字を使用してください' }
+  validates :login_num, presence: true, numericality: { message: 'には8桁の半角数字を使用してください' }
 
   PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/
   validates_format_of :password, with: PASSWORD_REGEX, message: 'には半角英字と半角数字の両方を含めて設定してください'

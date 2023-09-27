@@ -16,5 +16,5 @@ class User < ApplicationRecord
 
   has_many :items
   has_many :order_items
-  belongs_to :chats
+  has_many :chats
 end

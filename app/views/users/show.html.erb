@@ -28,9 +28,12 @@
           </tr>
         </tbody>
       </table>
-      <h2 class="page-heading">
-        <%= "#{@name}さんのプロトタイプ" %>
-      </h2>
+
+      <% if user_signed_in? %> 
+          <%= link_to "Edit", edit_user_path(@user.id), method: :get, class: "user-red-btn" %>
+          <%= link_to "Delete","/users/#{@user.id}", data: { turbo_method: :delete }, class:"user-destroy" %>
+      <% end %>
+
     </div>
   </div>
 </div>

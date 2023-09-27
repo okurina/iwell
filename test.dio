@@ -24,7 +24,7 @@
                 <mxCell id="j9PeuxUBEROyBElXUbgL-39" value="department" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="j9PeuxUBEROyBElXUbgL-26" vertex="1">
                     <mxGeometry y="116" width="160" height="30" as="geometry"/>
                 </mxCell>
-                <mxCell id="j9PeuxUBEROyBElXUbgL-29" value="login_id" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="j9PeuxUBEROyBElXUbgL-26" vertex="1">
+                <mxCell id="j9PeuxUBEROyBElXUbgL-29" value="login_num" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=12;" parent="j9PeuxUBEROyBElXUbgL-26" vertex="1">
                     <mxGeometry y="146" width="160" height="30" as="geometry"/>
                 </mxCell>
                 <mxCell id="j9PeuxUBEROyBElXUbgL-30" value="chats" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;align=center;fontSize=14;fillColor=#fad9d5;strokeColor=#ae4132;fontColor=#0a0a0a;" parent="1" vertex="1">

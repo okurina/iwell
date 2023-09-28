@@ -1,0 +1,26 @@
+<div class='user-contents'>
+  <div class="title" >
+    ユーザー一覧
+  </div>
+  <% if user_signed_in? %>
+    <div class="new_account">
+      <%= link_to "追加登録", "#", class: "create" %>
+    </div>
+  <% end %>
+  <ul class='user-lists'>
+    <% @users.each do |user| %>
+      <li class='list'>
+        <%= link_to user_path(user) do %>
+          <div class='user-info'>
+            <h3 class='user-name'>
+              <%= user.user_name %>
+            </h3>
+            <div class='user-department'>
+              <span><%= user.department %></span>
+            </div>
+          </div>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>

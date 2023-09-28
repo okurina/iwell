@@ -248,12 +248,13 @@
                 <mxCell id="oO4gHy5amEIiPWi_o0kt-16" value="編集ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="560" y="121" width="100" height="40" as="geometry"/>
                 </mxCell>
-                <mxCell id="oO4gHy5amEIiPWi_o0kt-53" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="oO4gHy5amEIiPWi_o0kt-18" edge="1">
+                <mxCell id="oO4gHy5amEIiPWi_o0kt-53" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" edge="1">
                     <mxGeometry relative="1" as="geometry">
-                        <mxPoint x="540" y="252" as="targetPoint"/>
+                        <mxPoint x="540" y="250" as="targetPoint"/>
+                        <mxPoint x="560" y="250" as="sourcePoint"/>
                     </mxGeometry>
                 </mxCell>
-                <mxCell id="oO4gHy5amEIiPWi_o0kt-18" value="詳細ページ" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+                <mxCell id="oO4gHy5amEIiPWi_o0kt-18" value="詳細ページ&lt;br&gt;（マイページ）" style="rounded=1;arcSize=10;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
                     <mxGeometry x="560" y="232" width="100" height="40" as="geometry"/>
                 </mxCell>
                 <mxCell id="oO4gHy5amEIiPWi_o0kt-44" style="edgeStyle=none;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;" parent="1" source="oO4gHy5amEIiPWi_o0kt-19" edge="1">

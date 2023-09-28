@@ -1,7 +1,6 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!, only: [:index, :show, :edit, :update, :destroy]
-  before_action :set_item, only: [:show, :edit, :update ]
-  before_action :move_to_index, except: [:index, :new]
+  before_action :authenticate_user!, except: :index
+  before_action :set_item, only: [:show, :edit, :update]
   
   def index
     @users = User.all
@@ -29,19 +28,13 @@ class UsersController < ApplicationController
   def destroy
     user = User.find(params[:id])
     user.destroy
-    redirect_to root_path
+    redirect_to users_path
   end
 
   private
 
   def user_params
     params.require(:user).permit(:user_name, :department, :login_num).merge(user_id: current_user.id)
-  end
-
-  def move_to_index
-    unless user_signed_in?
-      redirect_to action: :index
-    end
   end
 
   def set_item

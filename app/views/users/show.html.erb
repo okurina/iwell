@@ -30,7 +30,7 @@
       </table>
 
       <% if user_signed_in? %> 
-          <%= link_to "Edit", edit_user_path(@user.id), method: :get, class: "user-red-btn" %>
+          <%= link_to "Edit", edit_user_registration_path(@user.id), method: :get, class: "user-red-btn" %>
           <%= link_to "Delete","/users/#{@user.id}", data: { turbo_method: :delete }, class:"user-destroy" %>
       <% end %>
 

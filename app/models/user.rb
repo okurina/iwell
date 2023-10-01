@@ -32,4 +32,5 @@ class User < ApplicationRecord
   has_many :items
   has_many :order_items
   has_many :chats
+  has_many :roles, through: :user_roles
 end

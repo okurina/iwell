@@ -1,7 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:index, :new, :edit, :destroy]
   before_action :move_to_index, except: [:index]
-
   
   def index
     @items = Item.all

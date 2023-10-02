@@ -2,7 +2,6 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   
   belongs_to :user
-  belongs_to :order_item
   has_one_attached :image
 
   belongs_to :category
@@ -21,9 +20,9 @@ class Item < ApplicationRecord
     validates :place_id
   end
 
-  with_options numericality: { message: 'には半角数字を使用してください' } do
+  with_options numericality: { message: 'には半角数字を使用してください', allow_blank: true} do
     validates :price
     validates :quantity
   end
-
+  
 end

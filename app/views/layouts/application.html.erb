@@ -15,6 +15,18 @@
         <h1 class="grid-6"><a href="/">iWell</a></h1>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
+            <span><%= link_to "検索", "#", class: "post" %>
+              <ul class="user__info">
+                <li>
+                  <%= link_to "備品", "#" %>
+                  <%= link_to "在庫", "#" %>
+                </li>
+              </ul>
+            </span>
+            <%= link_to "Chat", "#", class: "post" %>
+
+          </div>
+          <div class="user_nav grid-6">
             <%= link_to "新規商品登録", new_item_path, class: "post" %>
             <%= link_to "発注リスト", "#", class: "post" %>
             <%= link_to "ユーザー管理", users_path, class: "post" %>

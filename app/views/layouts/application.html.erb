@@ -28,7 +28,7 @@
           </div>
           <div class="user_nav grid-6">
             <%= link_to "新規商品登録", new_item_path, class: "post" %>
-            <%= link_to "発注リスト", "#", class: "post" %>
+            <%= link_to "発注リスト", order_lists_path, class: "post" %>
             <%= link_to "ユーザー管理", users_path, class: "post" %>
             <span><%= link_to "#{current_user.user_name}", class: :greeting__link%>
               <ul class="user__info">

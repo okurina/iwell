@@ -40,7 +40,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_03_013454) do
   end
 
   create_table "chats", charset: "utf8", force: :cascade do |t|
-    t.text "sentence"
+    t.text "message"
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

@@ -30,7 +30,8 @@ class User < ApplicationRecord
   end
 
   has_many :items
-  has_many :order_items
   has_many :chats
   has_many :roles, through: :user_roles
+  belongs_to :order_item
+
 end

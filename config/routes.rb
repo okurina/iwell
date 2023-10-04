@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   resources :items
   resources :users, only: [:index, :show, :edit, :update, :destroy]
   resources :chats, only: [:index, :create]
-
+  resources :order_lists, only: :index
+  
 end

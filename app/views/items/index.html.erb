@@ -1,27 +1,9 @@
 <%= render "shared/header" %>
 
-<%# 在庫一覧 %>
-<div class='item-contents'>
-    <div class="subtitle" >
-      在庫一覧
-    </div>
-    <div class="side-bar"><%= render "side-bar" %></div>
-    <ul class='item-lists'>
-      <% @items.each do |item| %>
-        <li class='list'>
-          <%= link_to item_path(item) do %>
-            <div class='item-img-content'>
-              <%= image_tag(item.image.variant(resize: '100x100'), class: "item-img") %>
-            </div>
-            <div class='item-info'>
-              <h3 class='item-name'>
-                <%= item.item_name %>
-              </h3>
-            </div>
-          <% end %>
-        </li>
-      <% end %>
-    </ul>
+<div class="wrapper">
+  <div class="side-bar"><%= render "side-bar" %></div>
 </div>
+<div class="main-page"><%= render "main-page" %></div>
 
-<%= render "shared/footer"%>
+
+<%= render "shared/footer" %>

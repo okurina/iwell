@@ -7,8 +7,18 @@
 
 /****************サイドバー************/
 .side-bar {
-  background-color: #d9dee4;
+  background-color: #fbe0b5;
   width: 150px;
+}
+
+.search-contents{
+  width: 100%;
+  height: 350px;
+}
+
+.chat-contents{
+  width: 100%;
+  height: 100px;
 }
 
 /****************メイン（商品一覧）************/

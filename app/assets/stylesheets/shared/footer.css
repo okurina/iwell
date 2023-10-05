@@ -27,7 +27,7 @@
   background-color: #9ae6df;
   text-align: center;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
-  position: absolute;/*←絶対位置*/
+  position: sticky;
   bottom: 0; /*下に固定*/
 
 }

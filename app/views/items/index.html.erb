@@ -5,6 +5,7 @@
     <div class="subtitle" >
       在庫一覧
     </div>
+    <div class="side-bar"><%= render "side-bar" %></div>
     <ul class='item-lists'>
       <% @items.each do |item| %>
         <li class='list'>
@@ -22,3 +23,5 @@
       <% end %>
     </ul>
 </div>
+
+<%= render "shared/footer"%>

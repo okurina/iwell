@@ -21,9 +21,8 @@
   height: 100px;
 }
 
-/****************メイン（商品一覧）************/
+/****************メイン（在庫一覧）************/
 .main-page {
-  background-color: #d09a9a;
   width: calc(100vw - 150px);
 
 }
@@ -33,8 +32,6 @@ a {
   text-decoration: none;
 }
 
-/* 商品一覧 */
-
 .main-page>.subtitle {
   font-size: 3vh;
   margin: 1vh 5vh;
@@ -43,40 +40,33 @@ a {
   font-weight: bold;
 }
 
-.item-lists {
-  width: 100%;
-  flex-direction: column;
+.item-table {
+  margin: 30px;
+  width: 70%;
 }
 
-.item-lists>.item-list {
-  width: 37vh;
-  padding: 1vw;
-  list-style: none;
-
+.item-table-header {
+  width: 15%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+  padding: 2vh;
 }
 
-.list{
-  display: flex;
+.item-table-body {
+  width: 30px;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  overflow-wrap: anywhere;
 }
 
-.item-img {
-  width: 10vh;
-  height: 10vh;
+.item-table-pen{
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #dedede;
 }
 
-.item-info {
-  color: black;
-  padding: 1vw;
-}
 
-.item-name {
-  font-size: 2.5vh;
-}
-
-.item-price {
-  font-size: 1.5vh;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* //商品一覧 */
+/* //在庫一覧 */

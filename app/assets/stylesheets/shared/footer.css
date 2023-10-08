@@ -24,7 +24,11 @@
   width: 100vw;
   padding: 2vh 0;
   color: #FFF;
-  background-color: #9ae6df;
+  background-color: rgb(248, 227, 204);
+  background-image: url('footer.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
   text-align: center;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
   position: sticky;

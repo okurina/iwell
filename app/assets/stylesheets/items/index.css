@@ -3,23 +3,22 @@
   min-height: 100vh;
   position: relative;/*←相対位置*/
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  border-top: 2px solid #dedede;
+
 }
 
 /****************サイドバー************/
-.side-bar {
-  background-color: #fee1b1;
+.side-bars {
+  border-right: 2px solid #dedede;
   width: 200;
-
 }
 
 .search-contents{
   width: 100%;
-  height: 350px;
 }
 
 .chat-contents{
   width: 100%;
-  height: 100px;
 }
 
 /****************メイン（在庫一覧）************/
@@ -39,6 +38,7 @@ a {
   text-decoration: none;
   color: #0a0a0a;
   font-weight: bold;
+  padding-top: 20px;
 }
 
 .item-table {

@@ -23,49 +23,51 @@
   flex-wrap: wrap;
   width: 100%;
   padding: 1vh 0;
+  list-style: none;
+  color: #333333;
+
 }
 
 .new-item {
   text-decoration: none;
-  color: #333333;
   margin-right: 50px;
 }
 
 .item-list {
   text-decoration: none;
-  color: #333333;
   margin-right: 50px;
-
 }
 
 .user-list {
   text-decoration: none;
-  color: #333333;
   margin-right: 50px;
-
 }
 
-.user-nickname {
-  text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
+.user-name {
+  width: 200px;
+  height: 40px;
+  background: #fff;
+  line-height: 2.8;
+  border-right: 1px solid #eee;
 }
 
-
-.logout {
+.user-name a {
   text-decoration: none;
-  color: #333333;
+  color: #000;
 }
 
-.login {
-  text-decoration: none;
-  line-height: 32px;
-  margin-right: 3vw;
-  color: #333333;
+.user_info{
+  display: none;
+  margin-left: -40px;
+  position: absolute;
+  list-style: none;
 }
 
-.sign-up {
-  text-decoration: none;
-  color: #333333;
+.user-info li{
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: white;
+  border: 1px solid #CCCCCC;
+  background-color: antiquewhite;
 }

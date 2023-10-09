@@ -69,7 +69,7 @@
       </div>
     <% end %>
     <div class = "images">
-      <%= image_tag(@item.image.variant(resize: '300x300'), class: "item-img") %>
+      <%= image_tag(@item.image.variant(resize: '300x300'), class: "item-img"), placeholder:"画像なし" %>
     </div>
   </div>
   

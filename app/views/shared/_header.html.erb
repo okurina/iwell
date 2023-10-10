@@ -7,7 +7,6 @@
     <% if user_signed_in? %>
       <ul class="top-nav">
         <li><%= link_to "新規商品登録", new_item_path, class: "new-item" %></li>
-        <li><%= link_to "発注リスト", order_lists_path, class: "item-list" %></li>
         <li><%= link_to "ユーザー管理", users_path, class: "user-list" %></li>
         <li id= "username"><%= current_user.user_name %>
           <ul class="user_info", id = "userpulldown">

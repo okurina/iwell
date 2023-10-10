@@ -14,6 +14,9 @@
   background-color: #fafafa;
   border-radius: 5px;
   border: 1px solid #959da5;
+}
+
+.chat{
   display: flex;
   justify-content: space-between;
 }
@@ -54,6 +57,11 @@
 }
 .chat-delete{
   margin-left: 20px;
+}
+
+.chat-likes{
+  display: flex;
+  justify-content: right;
 }
 
 /****************投稿フォーム************/

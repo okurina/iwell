@@ -15,7 +15,7 @@ if (document.URL.match( /new/ ) || document.URL.match( /edit/ )) {
     };
     document.getElementById('item-image').addEventListener('change', function(e){
       // 画像が表示されている場合のみ、すでに存在している画像を削除する
-      const imageContent = document.querySelector('img');
+      const imageContent = document.querySelector('.preview');
       if (imageContent){
         imageContent.remove();
       }

@@ -6,4 +6,3 @@ jQuery(document).on('turbo:load', function(){
       $('ul', this).stop().slideUp('normal');
   });
 });
-  

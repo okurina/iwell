@@ -1,0 +1,73 @@
+.wrapper{
+  display: flex;
+  min-height: 100vh;
+  position: relative;/*←相対位置*/
+  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
+  border-top: 2px solid #dedede;
+
+}
+
+/****************サイドバー************/
+.side-bars {
+  border-right: 2px solid #dedede;
+  width: 200;
+}
+
+.search-contents{
+  width: 100%;
+}
+
+.chat-contents{
+  width: 100%;
+}
+
+/****************メイン（在庫一覧）************/
+.main-page {
+  width: calc(100vw - 200px);
+
+}
+
+
+a {
+  text-decoration: none;
+}
+
+.main-page>.subtitle {
+  font-size: 3vh;
+  margin: 1vh 5vh;
+  text-decoration: none;
+  color: #0a0a0a;
+  font-weight: bold;
+  padding-top: 20px;
+}
+
+.item-table {
+  margin: 30px;
+  width: 70%;
+}
+
+.item-table-header {
+  width: 15%;
+  background-color: #eee;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+  padding: 2vh;
+}
+
+.item-table-body {
+  width: 30px;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.item-table-pen{
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #dedede;
+}
+
+
+/* //在庫一覧 */

@@ -1,0 +1,167 @@
+/* border-bottom: 1px solid #eee; */
+
+.new-items-contents {
+  font-family: "Source Sans Pro", Helvetica, Arial, "æ¸¸ã‚´ã‚·ãƒƒã‚¯ä½“", "YuGothic", "ãƒ¡ã‚¤ãƒªã‚ª", "Meiryo", sans-serif;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 500px;
+}
+
+.new-items-main {
+  background-color: #FFF;
+  width: 70vw;
+  min-width: 450px;
+  padding: 5vh 15vw;
+}
+
+.new-items-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 共通 */
+.indispensable {
+  background: #e9615a;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.indispensable2 {
+  background: #c1bfbf;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weight-bold-text {
+  font-weight: bold;
+  min-width: 170px;
+  margin-bottom: 10px;
+}
+
+.select-box {
+  height: 30px;
+  width: 100%;
+  background-color: #f5f5f5;
+  padding-left: 20px;
+}
+
+/* /共通 */
+
+/* 商品画像 */
+.img-upload {
+  flex-wrap: wrap;
+  padding: 2vh 0;
+}
+.right-img-upload{
+  display: flex;
+}
+
+.click-upload {
+  margin: 15px 0;
+  min-width: 250px;
+}
+
+.click-upload>p {
+  margin-bottom: 15px;
+}
+
+.preview {
+  height: 150px;
+  width: 150px;
+  object-fit: contain;
+}
+
+/* /商品画像 */
+
+/* 商品名と商品説明 */
+.new-items {
+  padding: 2vh 0;
+}
+
+.items-text {
+  width: 100%;
+  padding: 16px 16px 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  resize: none;
+}
+
+.items-explain {
+  margin-top: 2vh;
+}
+
+/* /商品名と商品説明 */
+
+/* 商品の詳細など */
+.items-detail {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 0;
+}
+
+.items-detail>.form {
+  width: 300px;
+  padding: 2vh 0;
+}
+
+.select-box {
+  margin: 2vh 0;
+}
+
+.select-date{
+  margin: 2vh 0;
+}
+
+.sell-yen {
+  font-size: 16px;
+}
+
+.price-input {
+  height: 30px;
+  padding-right: 10px;
+  margin: 2vh 0;
+}
+
+/* /商品の詳細など */
+
+
+/* 下部ボタン */
+.sell-btn-contents {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.sell-btn {
+  background: #25aeb5;
+  border: 1px solid #25aeb5;
+  color: #fff;
+  height: 50px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 4vh 0;
+}
+
+.back-btn{
+  background: #cad5d5;
+  border: 1px solid #cad5d5;
+  color: #fff;
+  height: 50px;
+  font-size: 14px;
+  padding: 15px 35%;
+
+}

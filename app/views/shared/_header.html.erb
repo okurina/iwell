@@ -1,0 +1,25 @@
+<%# CSS・・・assets/stylesheets/shared/header.css %>
+<header class="top-page-header">
+  <div class="top-bar-contents">
+    <div class="top-logo">
+      <%= link_to image_tag("logo.png", size: '220x100', class: :logo), root_path %>
+    </div>
+    <% if user_signed_in? %>
+      <ul class="top-nav">
+        <li><%= link_to "新規商品登録", new_item_path, class: "new-item" %></li>
+        <li><%= link_to "発注リスト", order_lists_path, class: "item-list" %></li>
+        <li><%= link_to "ユーザー管理", users_path, class: "user-list" %></li>
+        <li id= "username"><%= current_user.user_name %>
+          <ul class="user_info", id = "userpulldown">
+            <li>
+              <%= link_to "マイページ", "/users/#{current_user.id}"%>
+            </li>
+            <li>
+              <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+</header>

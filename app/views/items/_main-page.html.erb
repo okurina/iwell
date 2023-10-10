@@ -1,0 +1,32 @@
+<div class='main-page'>
+  <div class="subtitle" >
+    在庫一覧
+  </div>
+
+
+  <table class="item-table">
+    <thead>
+      <tr>
+        <th class="item-table-header"></th>
+        <th class="item-table-header">物品名</th>
+        <th class="item-table-header">カテゴリー</th>
+        <th class="item-table-header">保管場所</th>
+        <th class="item-table-header">数量</th>
+        <th class="item-table-header">更新日</th>
+        <th class="item-table-header"></th>
+    </thead>
+    <% @items.each do |item| %>
+      <tbody>
+        <tr>
+          <td class="item-table-pen"><%= image_tag(item.image.variant(resize: '80x80'), class: "item-img") %></td>
+          <td class="item-table-body"><%= item.item_name %></td>
+          <td class="item-table-body"><%= item.category.name %></td>
+          <td class="item-table-body"><%= item.place.name %></td>
+          <td class="item-table-body"><%= item.quantity %><%= item.unit.name%></td>
+          <td class="item-table-body"><%= l item.updated_at %></td>
+          <td class="item-table-pen"><%= link_to "詳細", item_path(item) %></td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+</div>

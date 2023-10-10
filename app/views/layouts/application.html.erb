@@ -5,55 +5,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <script type="text/javascript" src="//code.jquery.com/jquery-3.7.1.min.js"></script>
   </head>
 
   <body>
-    <header class="header">
-      <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">iWell</a></h1>
-        <% if user_signed_in? %>
-          <div class="user_nav grid-6">
-            <span><%= link_to "検索", "#", class: "post" %>
-              <ul class="user__info">
-                <li>
-                  <%= link_to "備品", "#" %>
-                  <%= link_to "在庫", "#" %>
-                </li>
-              </ul>
-            </span>
-            <%= link_to "Chat", chats_path, class: "post" %>
-
-          </div>
-          <div class="user_nav grid-6">
-            <%= link_to "新規商品登録", new_item_path, class: "post" %>
-            <%= link_to "発注リスト", order_lists_path, class: "post" %>
-            <%= link_to "ユーザー管理", users_path, class: "post" %>
-            <span><%= link_to "#{current_user.user_name}", class: :greeting__link%>
-              <ul class="user__info">
-                <li>
-                  <%= link_to "マイページ", "/users/#{current_user.id}" %>
-                  <%= link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete } %>
-                </li>
-              </ul>
-            </span>
-          </div>
-        <% else %>
-          <div class="grid-6">
-            <%= link_to "ログイン", new_user_session_path, class: "post" %>
-            <%= link_to "新規登録", new_user_registration_path, class: "post" %>
-          </div>
-        <% end %>
-      </div>
-    </header>
-
     <%= yield %>
-
-    <footer>
-      <p>
-        Copyright iWell 2023.
-      </p>
-    </footer>
   </body>
+  
 </html>

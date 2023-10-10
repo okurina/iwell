@@ -1,20 +1,17 @@
+<%# CSS・・・assets/stylesheets/items/show.css %>
+
+<%= render "shared/header" %>
+
+<div class = "item-show-head">
+  <p>在庫データ詳細</p>
+</div>
+
 <%# 商品の概要 %>
 <div class="item-show">
   <div class="item-box">
-    <div class="item-img-content">
-      <%= image_tag(@item.image.variant(resize: '200x200'), class: "item-img") %>
-    </div>
     <h2 class="name">
       <%= @item.item_name %>
     </h2>
-
-    <% if user_signed_in? %> 
-      <% if current_user.id == @item.user_id %>
-        <%= link_to "商品の編集", edit_item_path(@item), method: :get, class: "item-red-btn" %>
-        <p class="or-text">or</p>
-        <%= link_to "削除","/items/#{@item.id}", data: { turbo_method: :delete }, class:"item-destroy" %>
-      <% end %>
-    <% end %>
 
     <table class="detail-table">
       <tbody>
@@ -59,15 +56,23 @@
       </div>
     </div>
   </div>
-  <%# /商品の概要 %>
 
-  <div class="links">
-    <a href="#" class="change-item-btn">
-      ＜ 前の商品
-    </a>
-    <a href="#" class="change-item-btn">
-      後ろの商品 ＞
-    </a>
+  <div class="item-content">
+    <% if user_signed_in? %>
+      <div class = "item-btns">
+        <div class = "item-btn">
+          <%= link_to "Edit", edit_item_path(@item), method: :get, class: "item-red-btn" %>
+        </div>
+        <div class = "item-btn">
+          <%= link_to "Delete","/items/#{@item.id}", data: { turbo_method: :delete }, class:"item-destroy" %>
+        </div>
+      </div>
+    <% end %>
+    <div class = "images">
+      <%= image_tag(@item.image.variant(resize: '300x300'), class: "item-img") %>
+    </div>
   </div>
-  <a href="#" class="another-item"><%= @item.category.name %>をもっと見る</a>
+  
 </div>
+
+<%= render "shared/footer" %>

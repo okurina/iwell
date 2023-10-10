@@ -1,0 +1,104 @@
+/****************チャット************/
+.chat-title {
+  font-size: 3vh;
+  margin: 1vh 6vh;
+  text-decoration: none;
+  color: #0a0a0a;
+  font-weight: bold;
+}
+
+.chat{
+  width: 77vw;
+  margin: 20px 0 0 0;
+  padding: 10px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  border: 1px solid #959da5;
+}
+
+.chat-main{
+  padding: 20px 40px 0;
+  overflow: scroll;
+}
+
+.chat_top{
+  display: flex;
+
+}
+.chat_name{
+  font-size: 14px;
+  color: #434a54;
+  margin-right: 10px;
+}
+
+.chat_time{
+  font-size: 12px;
+  color: #999;
+}
+
+.chat_center{
+  margin-top: 15px;
+  display: flex;
+}
+
+.chat_comment{
+  font-size: 16px;
+  color: #434a54;
+  margin-bottom: 10px;
+}
+
+/****************投稿フォーム************/
+
+.form{
+  height: 90px;
+  padding: 20px 40px;
+  display: flex;
+}
+
+.form-input {
+  background-color: white;
+  display: flex;
+  width: 65vw;
+  
+}
+
+.form-message {
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 1px ridge #959da5;
+}
+
+.form-submit {
+  background-color: #25aeb5;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  width: 80px;
+  height: 50px;
+  margin-left: 15px;
+  padding: 0 20px;
+}
+
+.form-image {
+  background-color: lightblue;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
+  padding: 15px 20px;
+  width: 80px;
+  margin-left: 15px;
+  text-align: center;
+}
+
+.image-file{
+  height: 50px;
+}
+
+.hidden {
+  display: none;
+}

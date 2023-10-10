@@ -32,10 +32,6 @@
   </div>
 
   <div id="like-btn<%= chat.id %>">
-    <% if user_signed_in? && chat.liked_by?(current_user)%>
-      <%=link_to "確認済", chat_likes_path(chat.id),  data: { turbo_method: :delete }, class: "chat-likes" %>
-    <% else %>
-      <%=link_to "確認", chat_likes_path(chat.id), data: { turbo_method: :post }, class: "chat-likes" %>
-    <% end %>
+    <%= render partial: "likes/like", locals: { chat: chat } %>
   </div>
 </div>

@@ -1,0 +1,1 @@
+document.getElementById('order-list-btn<%= @item.id %>').innerHTML = "<%= j(render partial: 'order_lists/order_list', locals: {item: @item}) %>"

@@ -49,15 +49,12 @@
         </tr>
       </tbody>
     </table>
-    <div class="option">
-      <div class="favorite-btn">
-        <%= image_tag "star.png" ,class:"favorite-star-icon" ,width:"20",height:"20"%>
-        <span>お気に入り 0</span>
-      </div>
-    </div>
   </div>
 
   <div class="item-content">
+    <div id="order-list-btn<%= @item.id %>">
+      <%= render partial: "order_lists/order_list", locals: { item: @item } %>
+    </div>
     <% if user_signed_in? %>
       <div class = "item-btns">
         <div class = "item-btn">

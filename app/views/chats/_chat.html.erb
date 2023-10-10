@@ -1,20 +1,30 @@
-<div class="chat">
-  <div class="chat_top">
-    <div class="chat_name">
-      <!-- 投稿したユーザー名情報を出力する -->
-      <%= chat.user.user_name %>
-
+<div class="chats">
+  <div class= "chat">
+    <div class="chat_top">
+      <div class="chat_name">
+        <!-- 投稿したユーザー名情報を出力する -->
+        <%= chat.user.user_name %>
+      </div>
+      <div class="chat_time">
+        <!-- 投稿した時刻を出力する -->
+        <%= l chat.created_at %>
+      </div>
     </div>
-    <div class="chat_time">
-      <!-- 投稿した時刻を出力する -->
-      <%= l chat.created_at %>
+    <div class="chat_center">
+      <div class="chat_comment">
+        <!-- 投稿したメッセージ内容を記述する -->
+        <%= chat.message %>
+      </div>
+      <%= image_tag chat.image.variant(resize: '50x50'), class: 'chat-image' if chat.image.attached? %>
     </div>
   </div>
-  <div class="chat_center">
-    <div class="chat_comment">
-      <!-- 投稿したメッセージ内容を記述する -->
-      <%= chat.message %>
+
+  <div class= "chat-right">
+    <div class= "chat-edit">
+      <%= link_to "Edit", edit_chat_path(chat), method: :get, class: "chat-red-btn" %>
     </div>
-    <%= image_tag chat.image.variant(resize: '50x50'), class: 'chat-image' if chat.image.attached? %>
+    <div class= "chat-delete">
+      <%= link_to "Delete", chat_path(chat), data: { turbo_method: :delete }, class:"chat-destroy" %>
+    </div>
   </div>
 </div>

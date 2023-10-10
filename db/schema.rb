@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_03_033522) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_10_033858) do
   create_table "active_storage_attachments", charset: "utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "record_type", null: false
@@ -64,6 +64,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_03_033522) do
     t.index ["user_id"], name: "index_items_on_user_id"
   end
 
+  create_table "likes", charset: "utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "chat_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["chat_id"], name: "index_likes_on_chat_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "order_lists", charset: "utf8", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.bigint "item_id", null: false
@@ -108,6 +117,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_03_033522) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "chats", "users"
   add_foreign_key "items", "users"
+  add_foreign_key "likes", "chats"
+  add_foreign_key "likes", "users"
   add_foreign_key "order_lists", "items"
   add_foreign_key "order_lists", "users"
   add_foreign_key "users_roles", "roles"

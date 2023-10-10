@@ -1,0 +1,9 @@
+<% if user_signed_in? && chat.liked_by?(current_user)%>
+  <%=link_to chat_likes_path(chat.id),  data: { turbo_method: :delete }, class: "chat-likes",remote: true do%>
+    ♥<%= chat.likes.count %>確認
+  <% end %>
+<% else %>
+  <%=link_to chat_likes_path(chat.id), data: { turbo_method: :post }, class: "chat-likes", remote: true do%>
+    ♡<%= chat.likes.count %>確認
+  <% end %>
+<% end %>

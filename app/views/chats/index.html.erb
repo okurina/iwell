@@ -16,7 +16,7 @@
 <% end %>
 
 <div class="chat-main">
-  <%= render partial: 'chat', collection: @chats %>
+  <%= render partial: 'chat', collection: @chats, as: :chat%>
 </div>
 
 <%= render "shared/footer"%>

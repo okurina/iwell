@@ -31,6 +31,7 @@ class User < ApplicationRecord
 
   has_many :items
   has_many :chats
+  has_many :likes
   has_many :roles, through: :user_roles
   belongs_to :order_item
 

@@ -7,13 +7,18 @@
   font-weight: bold;
 }
 
-.chat{
+.chats{
   width: 77vw;
   margin: 20px 0 0 0;
   padding: 10px;
   background-color: #fafafa;
   border-radius: 5px;
   border: 1px solid #959da5;
+}
+
+.chat{
+  display: flex;
+  justify-content: space-between;
 }
 
 .chat-main{
@@ -45,6 +50,18 @@
   font-size: 16px;
   color: #434a54;
   margin-bottom: 10px;
+}
+
+.chat-right{
+  display: flex;
+}
+.chat-delete{
+  margin-left: 20px;
+}
+
+.chat-likes{
+  display: flex;
+  justify-content: right;
 }
 
 /****************投稿フォーム************/
@@ -102,3 +119,5 @@
 .hidden {
   display: none;
 }
+
+

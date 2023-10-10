@@ -1,0 +1,48 @@
+<%# app/assets/stylesheets/items/new.css %>
+
+<%= render "shared/second-header"%>
+
+<div class="new-items-contents">
+
+  <%= form_with model: @chat, url: chat_path(@chat), method: :patch, id: 'edit_chat', local: true do |f| %>
+    <div class="new-items-main">
+    <h2 class="new-items-title">内容を編集</h2>
+
+    <%= render 'shared/error_messages', model: f.object %>
+
+    <%# 商品名と商品説明 %>
+    <div class="new-items">
+      <div class="weight-bold-text">
+        内容
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :message, class:"items-text", id:"item-name", placeholder:"内容" %>
+    </div>
+    <%# 商品画像 %>
+    <div class="img-upload">
+      <div class="weight-bold-text">
+        画像
+        <span class="indispensable2">任意</span>
+      </div>
+      <div class="right-img-upload">
+        <div class="click-upload">
+          <p>
+            クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"item-image" %>
+        </div>
+        <div id="previews"></div>
+      </div>
+    </div>
+    <%# /商品画像 %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "登録する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', chats_path, class:"back-btn" %>
+    </div>
+    <%# /下部ボタン %>
+  <% end %>
+</div>
+
+<%= render "shared/footer"%>

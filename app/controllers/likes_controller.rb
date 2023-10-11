@@ -1,5 +1,5 @@
 class LikesController < ApplicationController
-  before_action :set_tweet
+  before_action :set_chat
 
   def create
     like = current_user.likes.build(chat_id: params[:chat_id])
@@ -17,7 +17,7 @@ class LikesController < ApplicationController
     end
   end
 
-  def set_tweet
+  def set_chat
     @chat = Chat.find(params[:chat_id])
   end
 

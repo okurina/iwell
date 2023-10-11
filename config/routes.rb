@@ -4,11 +4,15 @@ Rails.application.routes.draw do
   }
 
   root to: 'items#index'
-  resources :items
+  resources :items do
+    resources :order_lists, only: [:index, :create, :destroy] do
+      member do
+        delete :remove_from_list
+      end
+    end
+  end
   resources :users, only: [:index, :show, :edit, :update, :destroy]
   resources :chats, only: [:index, :create, :edit, :update, :destroy] do
     resource :likes, only: [:create, :destroy]
-  end
-  resources :order_lists, only: :index
-  
+  end  
 end

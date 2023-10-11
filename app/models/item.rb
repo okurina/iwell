@@ -2,7 +2,7 @@ class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
   
   belongs_to :user
-  belongs_to :order_item
+  has_many :order_lists
   has_one_attached :image
 
   belongs_to :category
@@ -26,4 +26,7 @@ class Item < ApplicationRecord
     validates :quantity
   end
   
+  def order_listed_by?(user)
+    order_lists.where(user_id: user.id).exists?
+  end
 end

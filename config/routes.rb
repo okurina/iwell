@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   root to: 'items#index'
   resources :items do
+    collection do
+      get :search
+    end
     resources :order_lists, only: [:index, :create, :destroy] do
       member do
         delete :remove_from_list

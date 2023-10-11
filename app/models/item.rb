@@ -29,4 +29,12 @@ class Item < ApplicationRecord
   def order_listed_by?(user)
     order_lists.where(user_id: user.id).exists?
   end
+
+  def self.search(search)
+    if search != ""
+      Item.where('item_name LIKE(?)', "%#{search}%")
+    else
+      Item.all
+    end
+  end
 end

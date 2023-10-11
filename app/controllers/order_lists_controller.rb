@@ -2,7 +2,7 @@ class OrderListsController < ApplicationController
   before_action :set_list
 
   def index
-
+    @order_list_items = current_user.order_lists.map(&:item)
   end
 
   def create
@@ -21,7 +21,15 @@ class OrderListsController < ApplicationController
     end
   end
 
+  def remove_from_list
+    order_list = OrderList.find_by(item_id: params[:item_id], user_id: current_user.id)
+    order_list.destroy
+    respond_to do |format|
+      format.js
+    end
+  end
+
   def set_list
-    @item = Item.find(params[:item_id])
+    @item = Item.find_by(id: params[:item_id])
   end
 end

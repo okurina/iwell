@@ -3,12 +3,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
+  min-height: 100vh;
 }
 
 .login-headers {
   width: 100%;
   min-width: 800px;
-  height: 70px;
+  height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,7 +23,9 @@
 .login-btn {
   width: 50%;
   margin: 0 auto;
-  margin-top: 50px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
 }
 
 .login-red-btn {
@@ -32,11 +35,26 @@
   border-radius: 4px;
   color: #fff;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
 }
 
 .login-flash-message {
   text-align: center;
   color: red;
+}
+
+.check-field{
+  margin-top: 20px;
+  text-align: center;
+}
+
+.new-user-btn{
+  text-align: center;
+  color: #25aeb5;
+  line-height: 48px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
 }

@@ -16,7 +16,10 @@
 .page-heading {
   font-size: 20px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin: 5vh 0;
+  margin-left: 80px;
+  color: #0a0a0a;
+
 }
 
 .item-box>.name {
@@ -26,8 +29,8 @@
 }
 
 .table {
-  margin-bottom: 30px;
   width: 100%;
+  padding: 3vh 5vw;
 }
 
 .table_col1 {
@@ -47,26 +50,7 @@
 
 }
 
+.user-btns{
+  padding: 3vh 5vw;
 
-.item-btns{
-  display: flex;
-  margin: 3vh;
-}
-
-.user-red-btn {
-  text-align: center;
-  background-color: #ea352d;
-  font-size: 18px;
-  font-weight: bold;
-  color: #FFF;
-  padding: 2vh 8vw;
-  margin-right: 10px;
-}
-
-.user-destroy {
-  background-color: lightgray;
-  text-align: center;
-  font-size: 18px;
-  color: black;
-  padding: 2vh 8vw;
 }

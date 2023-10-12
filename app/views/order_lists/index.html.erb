@@ -1,7 +1,7 @@
 <%= render "shared/header" %>
 
 <div class="order-lists-title">
-  <div class="lists-title" id="lists-title">オーダーリスト</div>
+  <div class="lists-title" id="lists-title">発注リスト</div>
 </div>
 
 <div class="order-lists-container">
@@ -10,22 +10,24 @@
       <thead>
         <tr>
           <th class="list-header"></th>
-          <th class="list-header">物品名</th>
+          <th class="list-header">アイテム名</th>
           <th class="list-header">カテゴリー</th>
           <th class="list-header">現在個数</th>
+          <th class="list-header">期限</th>
           <th class="list-header">発注コード</th>
           <th class="list-header">金額</th>
           <th class="list-header"></th>
       </thead>
       <tbody>
         <tr>
-          <td class="list-pen"><%= image_tag(item.image.variant(resize: '50x50'), class: "item-img") %></td>
+          <td class="list-pen"><%= image_tag(item.image.variant(resize: '60x60'), class: "item-img") %></td>
           <td class="list-body"><%= item.item_name %></td>
           <td class="list-body"><%= item.category.name %></td>
           <td class="list-body"><%= item.quantity %><%= item.unit.name%></td>
+          <td class="list-body"><%= item.expiry_date %></td>
           <td class="list-body"><%= item.order_code %></td>
           <td class="list-body">¥<%= item.price %></td>
-          <td class="list-pen"><%= link_to "発注OK", remove_from_list_item_order_list_path(item_id: item.id, id: item.order_lists[0].id), data: { turbo_method: :delete } %></td>
+          <td class="list-pen"><%= link_to image_tag("cart.png", size: '35x35'), remove_from_list_item_order_list_path(item_id: item.id, id: item.order_lists[0].id), data: { turbo_method: :delete } %></td>
         </tr>
       </tbody>
     </table>

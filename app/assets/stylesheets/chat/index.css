@@ -1,14 +1,14 @@
 /****************チャット************/
 .chat-title {
-  font-size: 3vh;
-  margin: 1vh 6vh;
+  font-size: 20px;
+  margin: 5vh 7vh;
   text-decoration: none;
   color: #0a0a0a;
   font-weight: bold;
 }
 
 .chats{
-  width: 77vw;
+  width: 50vw;
   margin: 20px 0 0 0;
   padding: 10px;
   background-color: #fafafa;
@@ -64,6 +64,14 @@
   justify-content: right;
 }
 
+.good-btn{
+  margin-right: 5px;
+}
+
+.good-count{
+  font-size: 20px;
+}
+
 /****************投稿フォーム************/
 
 .form{
@@ -75,7 +83,7 @@
 .form-input {
   background-color: white;
   display: flex;
-  width: 65vw;
+  width: 50vw;
   
 }
 

@@ -23,10 +23,10 @@
 
     <div class= "chat-right">
       <div class= "chat-edit">
-        <%= link_to "Edit", edit_chat_path(chat), method: :get, class: "chat-red-btn" %>
+        <%= link_to image_tag("pen.png", size: '25x25'), edit_chat_path(chat), method: :get, class: "chat-btn" %>
       </div>
       <div class= "chat-delete">
-        <%= link_to "Delete", chat_path(chat), data: { turbo_method: :delete }, class:"chat-destroy" %>
+        <%= link_to image_tag("trash.png", size: '25x25'), chat_path(chat), data: { turbo_method: :delete }, class:"chat-btn" %>
       </div>
     </div>
   </div>

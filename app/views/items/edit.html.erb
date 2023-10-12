@@ -4,14 +4,14 @@
 <div class="new-items-contents">
   <%= form_with model: @item, id: 'new_item', url: items_path, local: true do |f| %>
     <div class="new-items-main">
-      <h2 class="new-items-title">商品の情報を編集</h2>
+      <h2 class="new-items-title">アイテムの情報を編集</h2>
 
       <%= render 'shared/error_messages', model: f.object %>
 
       <%# 商品名と商品説明 %>
       <div class="new-items">
         <div class="weight-bold-text">
-          商品名
+          アイテム名
           <span class="indispensable">必須</span>
         </div>
         <%= f.text_area :item_name, class:"items-text", id:"item-name", placeholder:"商品名", maxlength:"40" %>
@@ -20,8 +20,8 @@
       <%# 商品画像 %>
       <div class="img-upload">
         <div class="weight-bold-text">
-          商品画像
-          <span class="indispensable">必須</span>
+          アイテム画像
+          <span class="indispensable2">任意</span>
         </div>
         <div class="right-img-upload">
           <div class="click-upload">
@@ -89,10 +89,10 @@
       <%# 商品説明 %>
       <div class="items-explain">
         <div class="weight-bold-text">
-          商品の説明
+          備考
           <span class="indispensable2">任意</span>
         </div>
-        <%= f.text_area :comment, class:"items-text", id:"item-info", placeholder:"備考" %>
+        <%= f.text_area :comment, class:"items-text", id:"item-info", placeholder:"アイテムの説明など" %>
       </div>
       <%# /商品説明 %>
 

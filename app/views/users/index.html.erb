@@ -1,14 +1,16 @@
 <%= render "shared/header" %>
 
 <div class='user-contents'>
-  <div class="title" >
-    ユーザー一覧
-  </div>
-  <% if user_signed_in? %>
-    <div class="new_account">
-      <%= link_to "追加登録", "#", class: "create" %>
+  <div class ="user-index-titles">
+    <div class="user-index-title" >
+      ユーザー一覧
     </div>
-  <% end %>
+    <% if user_signed_in? %>
+      <div class="new-account">
+        <%= link_to "追加登録", "#", class: "create" %>
+      </div>
+    <% end %>
+  </div>
 
   <table class="user-table">
     <thead>

@@ -7,17 +7,34 @@
 a {
   text-decoration: none;
 }
+.user-index-titles{
+  display: flex;
+}
 
-.user-contents>.title {
-  font-size: 3vh;
-  margin: 1vh 5vh;
-  color: #0a0a0a;
+.user-index-title {
+  font-size: 20px;
   font-weight: bold;
+  margin: 5vh 0;
+  margin-left: 80px;
+  color: #0a0a0a;
+}
+
+.new-account{
+  margin: 5vh 0;
+}
+
+.create{
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #666161;
+  margin-left: 80px;
+
 }
 
 .user-table {
-  margin: 30px;
   width: 70%;
+  padding: 3vh 5vw;
 }
 
 .user-table-header {

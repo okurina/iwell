@@ -7,7 +7,7 @@
 </div>
 
 <%# 商品の概要 %>
-<div class="item-show">
+<div class="item-show-left">
   <div class="item-box">
     <h2 class="name">
       <%= @item.item_name %>
@@ -51,17 +51,19 @@
     </table>
   </div>
 
-  <div class="item-content">
-    <div id="order-list-btn<%= @item.id %>">
-      <%= render partial: "order_lists/order_list", locals: { item: @item } %>
-    </div>
+  <div class="item-show-right">
     <% if user_signed_in? %>
-      <div class = "item-btns">
-        <div class = "item-btn">
-          <%= link_to "Edit", edit_item_path(@item), method: :get, class: "item-red-btn" %>
+      <div class = "click-btns">
+        <div class = "click-btn">
+          <%= image_tag("pen.png", size: '35x35', class: "click-btn-img") %>
+          <%= link_to "編集", edit_item_path(@item), method: :get, class: "click-btn-path" %>
         </div>
-        <div class = "item-btn">
-          <%= link_to "Delete","/items/#{@item.id}", data: { turbo_method: :delete }, class:"item-destroy" %>
+        <div class = "click-btn">
+          <%= image_tag("trash.png", size: '35x35', class: "click-btn-img") %>
+          <%= link_to "削除","/items/#{@item.id}", data: { turbo_method: :delete }, class:"click-btn-path" %>
+        </div>
+        <div id="order-list-btn<%= @item.id %>">
+          <%= render partial: "order_lists/order_list", locals: { item: @item } %>
         </div>
       </div>
     <% end %>

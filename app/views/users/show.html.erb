@@ -1,3 +1,4 @@
+<%# 一部items/show.css引用 %>
 <%= render "shared/header" %>
 
 <div class="user-show">
@@ -30,11 +31,20 @@
         </tr>
       </tbody>
     </table>
-     <% if user_signed_in? %> 
-        <%= link_to "Edit", edit_user_registration_path(@user.id), method: :get, class: "user-red-btn" %>
-        <%= link_to "Delete","/users/#{@user.id}", data: { turbo_method: :delete }, class:"user-destroy" %>
-    <% end %>
-
+    <div class ="user-btns">
+      <% if user_signed_in? %>
+        <div class = "click-btns">
+          <div class = "click-btn">
+            <%= image_tag("pen.png", size: '35x35', class: "click-btn-img") %>
+            <%= link_to "編集", edit_user_registration_path(@user.id), method: :get, class: "click-btn-path" %>
+          </div>
+          <div class = "click-btn">
+            <%= image_tag("trash.png", size: '35x35', class: "click-btn-img") %>
+            <%= link_to "削除","/users/#{@user.id}", data: { turbo_method: :delete }, class:"click-btn-path" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>
 

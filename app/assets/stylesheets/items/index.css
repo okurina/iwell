@@ -10,20 +10,54 @@
 /****************サイドバー************/
 .side-bars {
   border-right: 2px solid #dedede;
-  width: 200;
+  width: 230px;
 }
 
-.search-contents{
-  width: 100%;
+.side-bar{
+  padding: 15px;
+
 }
 
-.chat-contents{
+.side-bar-contents{
   width: 100%;
+  margin-bottom: 30px;
+}
+
+.contents-top{
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.contents-bottom{
+  display: flex;
+}
+
+.search-input{
+  width: 100%;
+  margin-bottom: 2px;
+  line-height: 20px;
+}
+
+.search-btn{
+  text-align: right;
+}
+
+
+.side-bar-second-contents{
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.side-bar-title{
+  padding: 10px;
+  color: #0a0a0a;
+  font-size: 16px;
 }
 
 /****************メイン（在庫一覧）************/
 .main-page {
-  width: calc(100vw - 200px);
+  width: calc(100vw - 230px);
 
 }
 

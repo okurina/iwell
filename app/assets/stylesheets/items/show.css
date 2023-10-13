@@ -1,18 +1,26 @@
-.item-show-head p {
+.item-show-head {
   font-size: 20px;
   font-weight: bold;
   margin: 5vh 0;
-  margin-left: 80px;
+  margin-left: 20vw;
   color: #0a0a0a;
 }
 
 /* 商品の概要 */
-
+.item-show{
+  display: flex;
+}
 .item-show-left {
-  width: 100vw;
+ width: 15vw;
+ min-height: 100vh;
+}
+
+.item-show-center {
+  width: 80vw;
   display: flex;
   min-height: 100vh;
-  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/}
+  box-sizing: border-box;
+}
 
 .item-box {
   background-color: #FFF;

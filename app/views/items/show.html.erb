@@ -3,75 +3,77 @@
 <%= render "shared/header" %>
 
 <div class = "item-show-head">
-  <p>在庫データ詳細</p>
+  在庫データ詳細
 </div>
 
 <%# 商品の概要 %>
-<div class="item-show-left">
-  <div class="item-box">
-    <h2 class="name">
-      <%= @item.item_name %>
-    </h2>
+<div class= "item-show">
+  <div class="item-show-left"></div>
+  <div class="item-show-center">
+    <div class="item-box">
+      <h2 class="name">
+        <%= @item.item_name %>
+      </h2>
 
-    <table class="detail-table">
-      <tbody>
-        <tr>
-          <th class="detail-item">カテゴリー</th>
-          <td class="detail-value"><%= @item.category.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">保管場所</th>
-          <td class="detail-value"><%= @item.place.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">数量</th>
-          <td class="detail-value"><%= @item.quantity %><%= @item.unit.name %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">期限</th>
-          <td class="detail-value"><%= @item.expiry_date %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">金額</th>
-          <td class="detail-value">¥<%= @item.price %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">発注コード</th>
-          <td class="detail-value"><%= @item.order_code %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">備考</th>
-          <td class="detail-value"><%= @item.comment %></td>
-        </tr>
-        <tr>
-          <th class="detail-item">登録者</th>
-          <td class="detail-value"><%= @item.user.user_name %></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+      <table class="detail-table">
+        <tbody>
+          <tr>
+            <th class="detail-item">カテゴリー</th>
+            <td class="detail-value"><%= @item.category.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">保管場所</th>
+            <td class="detail-value"><%= @item.place.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">数量</th>
+            <td class="detail-value"><%= @item.quantity %><%= @item.unit.name %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">期限</th>
+            <td class="detail-value"><%= @item.expiry_date %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">金額</th>
+            <td class="detail-value">¥<%= @item.price %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">発注コード</th>
+            <td class="detail-value"><%= @item.order_code %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">備考</th>
+            <td class="detail-value"><%= @item.comment %></td>
+          </tr>
+          <tr>
+            <th class="detail-item">登録者</th>
+            <td class="detail-value"><%= @item.user.user_name %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
 
-  <div class="item-show-right">
-    <% if user_signed_in? %>
-      <div class = "click-btns">
-        <div class = "click-btn">
-          <%= image_tag("pen.png", size: '35x35', class: "click-btn-img") %>
-          <%= link_to "編集", edit_item_path(@item), method: :get, class: "click-btn-path" %>
+    <div class="item-show-right">
+      <% if user_signed_in? %>
+        <div class = "click-btns">
+          <div class = "click-btn">
+            <%= image_tag("pen.png", size: '35x35', class: "click-btn-img") %>
+            <%= link_to "編集", edit_item_path(@item), method: :get, class: "click-btn-path" %>
+          </div>
+          <div class = "click-btn">
+            <%= image_tag("trash.png", size: '35x35', class: "click-btn-img") %>
+            <%= link_to "削除","/items/#{@item.id}", data: { turbo_method: :delete }, class:"click-btn-path" %>
+          </div>
+          <div id="order-list-btn<%= @item.id %>">
+            <%= render partial: "order_lists/order_list", locals: { item: @item } %>
+          </div>
         </div>
-        <div class = "click-btn">
-          <%= image_tag("trash.png", size: '35x35', class: "click-btn-img") %>
-          <%= link_to "削除","/items/#{@item.id}", data: { turbo_method: :delete }, class:"click-btn-path" %>
-        </div>
-        <div id="order-list-btn<%= @item.id %>">
-          <%= render partial: "order_lists/order_list", locals: { item: @item } %>
-        </div>
+      <% end %>
+      <div class = "images">
+        <%= image_tag(@item.image.variant(resize: '300x300'), class: "item-img") %>
       </div>
-    <% end %>
-    <div class = "images">
-      <%= image_tag(@item.image.variant(resize: '300x300'), class: "item-img") %>
     </div>
   </div>
-  
 </div>
 
 <%= render "shared/footer" %>

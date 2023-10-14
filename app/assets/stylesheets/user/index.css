@@ -2,6 +2,14 @@
   background-color: #fff;
   min-height: 100vh;
   width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.user-content{
+  width: 70vw;
+  padding: 3vh 5vw;
+
 }
 
 a {
@@ -33,7 +41,7 @@ a {
 }
 
 .user-table {
-  width: 70%;
+  width: 100%;
   padding: 3vh 5vw;
 }
 

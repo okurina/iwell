@@ -1,36 +1,38 @@
 <%= render "shared/header" %>
 
 <div class='user-contents'>
-  <div class ="user-index-titles">
-    <div class="user-index-title" >
-      ユーザー一覧
-    </div>
-    <% if user_signed_in? %>
-      <div class="new-account">
-        <%= link_to "追加登録", "#", class: "create" %>
+  <div class = "user-content">
+    <div class ="user-index-titles">
+      <div class="user-index-title" >
+        ユーザー一覧
       </div>
-    <% end %>
-  </div>
-
-  <table class="user-table">
-    <thead>
-      <tr>
-        <th class="user-table-header">名前</th>
-        <th class="user-table-header">所属</th>
-        <th class="user-table-header">ログインID</th>
-        <th class="user-table-header"></th>
-    </thead>
-    <% @users.each do |user| %>
-      <tbody>
+      <% if user_signed_in? %>
+        <div class="new-account">
+          <%= link_to "追加登録", "#", class: "create" %>
+        </div>
+      <% end %>
+    </div>
+  
+    <table class="user-table">
+      <thead>
         <tr>
-          <td class="user-table-body"><%= user.user_name %></td>
-          <td class="user-table-body"><%= user.department %></td>
-          <td class="user-table-body"><%= user.login_num %></td>
-          <td class="user-table-pen"><%= link_to "詳細", user_path(user) %></td>
-        </tr>
-      </tbody> 
-    <% end %>
-  </table>
+          <th class="user-table-header">名前</th>
+          <th class="user-table-header">所属</th>
+          <th class="user-table-header">ログインID</th>
+          <th class="user-table-header"></th>
+      </thead>
+      <% @users.each do |user| %>
+        <tbody>
+          <tr>
+            <td class="user-table-body"><%= user.user_name %></td>
+            <td class="user-table-body"><%= user.department %></td>
+            <td class="user-table-body"><%= user.login_num %></td>
+            <td class="user-table-pen"><%= link_to "詳細", user_path(user) %></td>
+          </tr>
+        </tbody> 
+      <% end %>
+    </table>
+  </div>
 </div>
 
 <%= render "shared/footer"%>

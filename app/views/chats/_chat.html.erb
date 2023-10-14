@@ -1,19 +1,19 @@
 <div class="chats">
   <div class= "chat">
 
-    <div class="chat-contents">
-      <div class="chat_top">
-        <div class="chat_name">
+    <div class="chat-message">
+      <div class="chat-top">
+        <div class="chat-name">
           <!-- 投稿したユーザー名情報を出力する -->
           <%= chat.user.user_name %>
         </div>
-        <div class="chat_time">
+        <div class="chat-time">
           <!-- 投稿した時刻を出力する -->
           <%= l chat.created_at %>
         </div>
       </div>
-      <div class="chat_center">
-        <div class="chat_comment">
+      <div class="chat-center">
+        <div class="chat-comment">
           <!-- 投稿したメッセージ内容を記述する -->
           <%= chat.message %>
         </div>

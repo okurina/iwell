@@ -1,19 +1,17 @@
 .wrapper{
   display: flex;
+  justify-content: center;
   min-height: 100vh;
+  width: 100vw;
   position: relative;/*←相対位置*/
   box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
-
-}
-.main-left{
-  width: 230px;
 
 }
 
 /****************メイン（在庫一覧）************/
 .main-page {
-  width: calc(100vw - 230px);
-  margin-left: 30px;
+  width: 70vw;
+  padding: 3vh;
 }
 
 a {
@@ -22,7 +20,6 @@ a {
 
 .main-page>.subtitle {
   font-size: 20px;
-  margin: 1vh 5vh;
   text-decoration: none;
   color: #0a0a0a;
   font-weight: bold;
@@ -30,8 +27,8 @@ a {
 }
 
 .item-table {
-  margin: 30px;
-  width: 70%;
+  margin: 30px 0;
+  width: 100%;
 }
 
 .item-table-header {

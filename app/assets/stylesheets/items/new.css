@@ -137,7 +137,7 @@
 
 
 /* 下部ボタン */
-.sell-btn-contents {
+.registration-btn-contents {
   width: 100%;
   text-align: center;
   display: flex;
@@ -145,7 +145,7 @@
   flex-direction: column;
 }
 
-.sell-btn {
+.registration-btn {
   background: #25aeb5;
   border: 1px solid #25aeb5;
   color: #fff;

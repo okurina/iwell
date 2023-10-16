@@ -11,7 +11,7 @@ class Ability
     if user.admin?
       can :manage, :all       # 全ての機能を使えるように設定
     else
-      can [:read, :update], :all
+      can [:read, :update, :create], :all
     end
 
     # Define abilities for the user here. For example:

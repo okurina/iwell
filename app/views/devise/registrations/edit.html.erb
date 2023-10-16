@@ -1,53 +1,62 @@
+<%# app/assets/stylesheets/items/new.css %>
 <%= render "shared/second-header"%>
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="new-items-contents">
+  <%= form_with model: @user, id: 'user_edit', url: user_registration_path, local: true do |f| %>
+    <div class="new-items-main">
+      <h2 class="new-items-title">ユーザーの情報を編集</h2>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+      <%= render 'shared/error_messages', model: f.object %>
 
-  <div class="field">
-    <%= f.label :user_name %><br />
-    <%= f.text_field :user_name, autofocus: true, autocomplete: "user_name" %>
-  </div>
+      <div class="new-items">
+        <div class="weight-bold-text">
+          名前
+        </div>
+        <%= f.text_area :user_name, class:"items-text", placeholder:"例) 田中太郎", maxlength:"40", autofocus: true, autocomplete: "user_name" %>
+      </div>
+      <div class="new-items">
+        <div class="weight-bold-text">
+          メールアドレス
+        </div>
+        <%= f.email_field :email, class:"items-text", placeholder:"例) mail@iwell.co.jp", autocomplete: "email" %>
+      </div>
+      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% end %>
+      <div class="new-items">
+        <div class="weight-bold-text">
+          新パスワード
+        </div>
+        <%= f.password_field :password, class:"items-text", placeholder:"6文字以上の半角英数字", autocomplete: "new-password" %>
+        <p class='info-text'>※変更がなければ空欄のままで問題ありません</p>
+      </div>
+      <div class="new-items">
+        <div class="weight-bold-text">
+          新パスワード(確認)
+        </div>
+        <%= f.password_field :password_confirmation, class:"items-text", autocomplete: "new-password" %>
+      </div>
+      <div class="new-items">
+        <div class="weight-bold-text">
+          所属
+        </div>
+        <%= f.text_area :department, class:"items-text", placeholder:"例) 総務部", autocomplete: "department" %>
+      </div>
+      <div class="new-items">
+        <div class="weight-bold-text">
+          ログインID(社員番号)
+        </div>
+        <%= f.text_field :login_num, class:"items-text", placeholder:"例) 00012345", autocomplete: "login_num" %>
+      </div>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <%# 下部ボタン %>
+      <div class="registration-btn-contents">
+        <%= f.submit "登録する" ,class:"registration-btn" %>
+        <%=link_to 'もどる', user_path(@user), class:"back-btn" %>
+      </div>
+      <%# /下部ボタン %>
+    </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(※変更がなければ空欄のままで問題ありません)</i><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :department %><br />
-    <%= f.text_field :department, autocomplete: "department" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :loginid %><br />
-    <%= f.text_field :login_num, autocomplete: "login_num" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
-
-<%= link_to "Back", :back %>
+</div>
 
 <%= render "shared/second-footer"%>

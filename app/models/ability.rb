@@ -12,13 +12,12 @@ class Ability
       can :manage, :all       # 全ての機能を使えるように設定
     elsif user.manager?
       can [:read, :update, :create], :all
-      cannot :create, User
-      cannot :destroy, User
+      cannot [:create,  :destroy], User
     else
-      can :read, :all
-      can :create, Chat
-      can :update, Chat
-      can :destroy, Chat
+      can [:read, :create], :all
+      cannot :create, [User, Item]
+      cannot :destroy, [User, Item] 
+      cannot :update, Item
     end
 
     # Define abilities for the user here. For example:

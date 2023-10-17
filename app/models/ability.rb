@@ -10,8 +10,14 @@ class Ability
 
     if user.admin?
       can :manage, :all       # 全ての機能を使えるように設定
+    elsif user.manager?
+      can [:read, :update, :create], :all
+      cannot [:create,  :destroy], User
     else
-      can [:read, :update], :all
+      can [:read, :create], :all
+      cannot :create, [User, Item]
+      cannot :destroy, [User, Item] 
+      cannot :update, Item
     end
 
     # Define abilities for the user here. For example:

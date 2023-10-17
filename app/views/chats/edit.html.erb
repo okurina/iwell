@@ -10,7 +10,6 @@
 
     <%= render 'shared/error_messages', model: f.object %>
 
-    <%# 商品名と商品説明 %>
     <div class="new-items">
       <div class="weight-bold-text">
         内容
@@ -18,7 +17,6 @@
       </div>
       <%= f.text_area :message, class:"items-text", id:"item-name", placeholder:"内容" %>
     </div>
-    <%# 商品画像 %>
     <div class="img-upload">
       <div class="weight-bold-text">
         画像
@@ -34,11 +32,10 @@
         <div id="previews"></div>
       </div>
     </div>
-    <%# /商品画像 %>
 
     <%# 下部ボタン %>
-    <div class="sell-btn-contents">
-      <%= f.submit "登録する" ,class:"sell-btn" %>
+    <div class="registration-btn-contents">
+      <%= f.submit "登録する" ,class:"registration-btn" %>
       <%=link_to 'もどる', chats_path, class:"back-btn" %>
     </div>
     <%# /下部ボタン %>

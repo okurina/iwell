@@ -1,16 +1,17 @@
+<%# app/assets/stylesheets/users/login.css %>
 <div class = "login-pic">
 
   <header class='login-headers'>
   </header>
 
-  <%= form_with  model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
+  <%= form_with  model: @user, url: user_session_path, class: 'login-main', local: true do |f| %>
     <div class='form-wrap'>
       <div class='form-header'>
         <div class='login-header'>
           <%= link_to image_tag("logo.png", size: '250x130', class: "login-logo") %>
         </div>
         <div class='form-header-text'>
-          Log in
+          ログイン
         </div>
       </div>
 
@@ -42,7 +43,7 @@
       <% end %>
 
       <div class='login-btn'>
-        <%= f.submit "ログイン" ,class:"login-red-btn" %>
+        <%= f.submit "ログイン" ,class:"login-blue-btn" %>
         <%= link_to "新規登録", new_user_registration_path, class: "new-user-btn" %>
       </div>
     </div>

@@ -30,7 +30,7 @@ class User < ApplicationRecord
   end
 
   has_many :items
-  has_many :chats
+  has_many :chats, dependent: :destroy
   has_many :likes
   has_many :roles, through: :user_roles
   has_many :order_lists

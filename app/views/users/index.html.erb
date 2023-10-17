@@ -8,7 +8,7 @@
       </div>
       <% if user_signed_in? %>
         <div class="new-account">
-          <%= link_to "追加登録", "#", class: "create" %>
+          <%= link_to "追加登録", new_user_registration_path, class: "create" %>
         </div>
       <% end %>
     </div>

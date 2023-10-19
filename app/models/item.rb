@@ -12,7 +12,6 @@ class Item < ApplicationRecord
   with_options presence: true do
     validates :item_name
     validates :quantity
-    validates :image
   end
 
   with_options numericality: { other_than: 1, message: "can't be blank" } do

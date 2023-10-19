@@ -18,7 +18,13 @@
     <% @items.each do |item| %>
       <tbody>
         <tr>
-          <td class="item-table-pen"><%= image_tag(item.image.variant(resize: '80x80'), class: "item-img") %></td>
+          <td class="item-table-pen">
+            <% if item.image.present? %>
+              <%= image_tag(item.image.variant(resize: '80x80'), class: "item-img") %>
+            <% else %>
+               <%= image_tag("no-image.png", size: '80x80', class: "item-img") %>
+            <% end %>
+          </td>
           <td class="item-table-body"><%= item.item_name %></td>
           <td class="item-table-body"><%= item.category.name %></td>
           <td class="item-table-body"><%= item.place.name %></td>

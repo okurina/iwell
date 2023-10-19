@@ -62,7 +62,7 @@
   flex-wrap: wrap;
   padding: 2vh 0;
 }
-.right-img-upload{
+.left-img-upload{
   display: flex;
 }
 
@@ -75,7 +75,7 @@
   margin-bottom: 15px;
 }
 
-.preview {
+.preview-image {
   height: 150px;
   width: 150px;
   object-fit: contain;

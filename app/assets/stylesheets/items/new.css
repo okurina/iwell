@@ -10,9 +10,12 @@
 
 .new-items-main {
   background-color: #FFF;
-  width: 70vw;
+  width: 60vw;
   min-width: 450px;
   padding: 5vh 15vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .new-items-title {
@@ -146,21 +149,25 @@
 }
 
 .registration-btn {
-  background: #25aeb5;
-  border: 1px solid #25aeb5;
+  background: #f0bd5d;
+  border: 1px solid #f0bd5d;
+  border-radius: 30px;
   color: #fff;
   height: 50px;
   font-size: 16px;
   font-weight: bold;
-  margin: 4vh 0;
+  margin: 20px 80px;
 }
 
 .back-btn{
   background: #cad5d5;
   border: 1px solid #cad5d5;
+  border-radius: 30px;
   color: #fff;
   height: 50px;
-  font-size: 14px;
-  padding: 15px 35%;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 80px;
+  padding: 15px;
 
 }

@@ -2,7 +2,8 @@
 <%= render "shared/second-header"%>
 
 <div class="new-items-contents">
-  <%= form_with model: @item, id: 'new_item', url: items_path, local: true do |f| %>
+  <%= form_with(model: @item, id: "new_item", local: true) do |f| %>
+
     <div class="new-items-main">
       <h2 class="new-items-title">アイテムの情報を編集</h2>
 
@@ -98,8 +99,8 @@
 
       <%# 下部ボタン %>
       <div class="registration-btn-contents">
-        <%= f.submit "登録する" ,class:"registration-btn" %>
-        <%=link_to 'もどる', root_path, class:"back-btn" %>
+        <%= f.submit "変更する" , class:"registration-btn" %>
+        <%=link_to 'もどる', item_path(@item), class:"back-btn" %>
       </div>
       <%# /下部ボタン %>
     </div>

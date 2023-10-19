@@ -1,5 +1,5 @@
 .login-pic{
-  background-image: url('login.png');
+  background-image: url('header-cover.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -125,10 +125,10 @@
   flex-direction: column;
 }
 
-.login-blue-btn {
+.login--btn {
   width: 100%;
-  background: #25aeb5;
-  border: 1px solid #25aeb5;
+  background: #f0bd5d;
+  border: 1px solid #f0bd5d;
   border-radius: 4px;
   color: #fff;
   line-height: 48px;
@@ -149,7 +149,7 @@
 
 .new-user-btn{
   text-align: center;
-  color: #25aeb5;
+  color: #f0bd5d;
   line-height: 48px;
   font-size: 18px;
   font-weight: bold;

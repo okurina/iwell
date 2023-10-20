@@ -5,12 +5,12 @@ Rails.application.routes.draw do
 
   root to: 'items#index'
   resources :items do
+    resources :order_lists, only: [:index, :create]
     collection do
       get :search
     end
-    resources :order_lists, only: [:index, :create]
   end
-  resources :order_lists, only: [:destroy] do
+  resources :order_lists, only: :destroy do
     member do
       delete :remove_from_list
     end

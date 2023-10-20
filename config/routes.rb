@@ -8,10 +8,11 @@ Rails.application.routes.draw do
     collection do
       get :search
     end
-    resources :order_lists, only: [:index, :create, :destroy] do
-      member do
-        delete :remove_from_list
-      end
+    resources :order_lists, only: [:index, :create]
+  end
+  resources :order_lists, only: [:destroy] do
+    member do
+      delete :remove_from_list
     end
   end
   resources :users, only: [:index, :show, :edit, :update, :destroy]

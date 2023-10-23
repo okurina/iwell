@@ -1,6 +1,6 @@
 .top-page-header {
   width: 100vw;
-  padding: 1vh 5vw;
+  padding: 1vh 3vw;
   display: flex;
   flex-direction: column;
   background-image: url('header-cover.png');
@@ -19,7 +19,38 @@
 }
 
 .top-logo {
-  margin-left: 20px;
+  margin-right: 40px;
+}
+
+.contents-top{
+  margin-bottom: 5px;
+}
+
+.contents-bottom{
+  color: #0a0a0a;
+}
+
+.search-form{
+  display: flex;
+}
+.search-input{
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.search-input input{
+  line-height: 30px;
+  width: 20vw;
+  border-radius: 5px;
+  border: 1px solid #959da5;
+}
+
+.search-btn input{
+  line-height: 30px;
+  margin-left: 15px;
+  border-radius: 5px;
+  border: 1px solid #959da5;
+  background-color: cad5d5;
 }
 
 .top-nav {

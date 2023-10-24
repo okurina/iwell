@@ -6,26 +6,20 @@
       <%= link_to image_tag("logo.png", size: '220x100', class: :logo), root_path %>
     </div>
     <% if user_signed_in? %>
-      <ul class="top-nav">
-        <div class = "side-bar-contents">
-          <div class = "contents-top">
-            <%= image_tag("search.png", size: '35x35', class: "side-bar-img") %>
-            <div class= side-bar-title>アイテム検索</div>
-          </div>
-          <div class = "contents-bottom">
-            <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
-              <%= form.text_field :keyword, placeholder: "アイテム名", class: "search-input" %>
-              <div class ="search-btn"><%= form.submit "検索" %></div>
-            <% end %>
-          </div>
+      <div class = "nav-search">
+        <div class = "contents-search">
+          <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
+            <div class ="search-inputs">
+              <div class = "search-input">
+                <%= image_tag("mushimegane-logo.png", size: '20x20', class: "search-img") %>
+                <%= form.text_field :keyword, placeholder: "アイテム名検索" %>
+              </div>
+            </div>
+          <% end %>
         </div>
-        <li>カテゴリー
-          <ul class = "category__info", id = "categorypulldown">
-            <li><%= link_to "備品", "#" %></li>
-            <li><%= link_to "在庫", "#" %></li>
-          </ul>
-        </li>
-        <li><%= link_to "発注リスト", "#", class: "side-bar-title", id: "order_list" %></li>
+      </div>
+      <ul class ="top-nav">
+        <li><%= link_to "発注リスト", "#", class: "nav-list", id: "order_list" %></li>
         <li><%= link_to "新規商品登録", new_item_path, class: "nav-list" %></li>
         <li><%= link_to "ユーザー管理", users_path, class: "nav-list" %></li>
         <%= image_tag("icon.png", size: '20x20', class: "icon") %>

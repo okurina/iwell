@@ -4,11 +4,9 @@
   min-height: 100vh;
   width: 100vw;
   position: relative;/*←相対位置*/
-  box-sizing: border-box;/*←全て含めてmin-height:100vhに*/
-
 }
 
-/****************メイン（在庫一覧）************/
+/**メイン（在庫一覧）**/
 .main-page {
   width: 70vw;
   padding: 3vh;
@@ -54,5 +52,6 @@ a {
   border: 1px solid #dedede;
 }
 
-
-/* //在庫一覧 */
+.item-table-pen a{
+  color: #333333;
+}

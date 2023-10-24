@@ -1,6 +1,6 @@
-<div class="side-bar">
-  <div class = "side-bar-second-contents">
-    <%= image_tag("chat.png", size: '35x35', class: "side-bar-img") %>
-    <%= link_to "チャット", chats_path, class: "side-bar-title" %>
-  </div>
+<div class="chat-bar">
+  <%= link_to chats_path, class: 'side-content' do %>
+    <span class='side-content-text'>チャット</span>
+    <%= image_tag("chat.png", size: '50x50', class: "side-content-img") %>
+  <% end %>
 </div>

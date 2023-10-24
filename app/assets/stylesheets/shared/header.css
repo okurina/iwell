@@ -86,7 +86,7 @@
 }
 
 .icon{
-  margin-right: 7px;
+  margin: 0 7px 5px 0;
 }
 
 .user-name a {
@@ -103,5 +103,6 @@
 .pull-down{
   color: #333333;
   margin-bottom: 5%;
+  font-size: 15px;
 }
 

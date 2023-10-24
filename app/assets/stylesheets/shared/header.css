@@ -22,35 +22,34 @@
   margin-right: 40px;
 }
 
-.contents-top{
-  margin-bottom: 5px;
-}
-
-.contents-bottom{
-  color: #0a0a0a;
-}
-
 .search-form{
   display: flex;
 }
+
+.search-inputs{
+  background-color: #fff;
+  border: 1px solid #959da5;
+  border-radius: 10px;
+  padding: 5px 5px 0;
+
+}
+
 .search-input{
   width: 100%;
   margin-bottom: 2px;
+  display: flex;
 }
 
 .search-input input{
   line-height: 30px;
   width: 20vw;
-  border-radius: 5px;
-  border: 1px solid #959da5;
+  border: none;
+  margin-left: 5px;
+  outline: 0;
 }
 
-.search-btn input{
-  line-height: 30px;
-  margin-left: 15px;
-  border-radius: 5px;
-  border: 1px solid #959da5;
-  background-color: cad5d5;
+.search-img{
+  margin: 5px 4px;
 }
 
 .top-nav {

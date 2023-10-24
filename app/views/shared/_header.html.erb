@@ -7,11 +7,14 @@
     </div>
     <% if user_signed_in? %>
       <div class = "nav-search">
-        <div class = "contents-top">アイテム検索</div>
-        <div class = "contents-bottom">
+        <div class = "contents-search">
           <%= form_with(url: search_items_path, local: true, method: :get, class: "search-form") do |form| %>
-            <div class ="search-input"><%= form.text_field :keyword, placeholder: " アイテム名" %></div>
-            <div class = "search-btn"><%= form.submit "検索" %></div>
+            <div class ="search-inputs">
+              <div class = "search-input">
+                <%= image_tag("mushimegane-logo.png", size: '20x20', class: "search-img") %>
+                <%= form.text_field :keyword, placeholder: "アイテム名検索" %>
+              </div>
+            </div>
           <% end %>
         </div>
       </div>

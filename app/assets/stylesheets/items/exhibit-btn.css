@@ -5,8 +5,8 @@
   border: 1px solid #f0bd5d;
   background-color: #fff;
   box-shadow: 0 3px 3px #f0bd5d;
-  bottom: 32px;
-  right: 32px;
+  bottom: 50px;
+  right: 80px;
   position: fixed;
   padding: 15px;
 }
@@ -14,7 +14,7 @@
 .side-content-text {
   color: #333333;
   display: block;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   margin-bottom: 5px;
 }

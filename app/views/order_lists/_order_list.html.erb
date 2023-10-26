@@ -1,7 +1,7 @@
 <% if user_signed_in? && @item.order_listed_by?(current_user)%>
   <div class = "order-list-btns"> 
     <%= image_tag("order-list.png", size: '35x35',class: "order-list-btn") %>
-    <%=link_to "リスト済", item_order_lists_path(@item), data: { turbo_method: :delete }, class: "item_likes", remote: true %>
+    <%=link_to "リスト済", item_order_list_path(@item), data: { turbo_method: :delete }, class: "item_likes", remote: true %>
   </div>
 <% else %>
   <div class = "order-list-btns"> 

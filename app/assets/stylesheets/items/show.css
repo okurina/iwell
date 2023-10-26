@@ -101,6 +101,12 @@
   padding:  10px 50px 10px 5px;
 }
 
+.main-back-btns{
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
 .main-back-btn{
   background: #cad5d5;
   border: 1px solid #cad5d5;
@@ -111,7 +117,6 @@
   margin-left: 20px;
   padding: 15px;
   text-align: center;
-
 }
 
 .main-back-btn a{

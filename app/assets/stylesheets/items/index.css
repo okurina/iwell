@@ -9,7 +9,8 @@
 /**メイン（在庫一覧）**/
 .main-page {
   width: 70vw;
-  padding: 3vh;
+  padding: 3vh 0;
+  margin-right: 10vw;
 }
 
 a {

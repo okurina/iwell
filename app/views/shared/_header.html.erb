@@ -19,8 +19,8 @@
         </div>
       </div>
       <ul class ="top-nav">
-        <li><%= link_to "発注リスト", "#", class: "nav-list", id: "order_list" %></li>
         <li><%= link_to "新規商品登録", new_item_path, class: "nav-list" %></li>
+        <li><%= link_to "チャット", chats_path, class: "nav-list" %></li>
         <li><%= link_to "ユーザー管理", users_path, class: "nav-list" %></li>
         <%= image_tag("icon.png", size: '20x20', class: "icon") %>
         <li id= "username"><%= current_user.user_name %>

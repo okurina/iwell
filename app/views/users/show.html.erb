@@ -4,26 +4,26 @@
 <div class="user-show">
   <div class="user_wrapper">
     <div class="page-heading">
-      <%= "#{@user_name}"%>さんの情報
+      <%= @user.user_name %>さんの情報
     </div>
     
     <table class="table">
       <tbody>
         <tr>
           <th class="table_col1">名前</th>
-          <td class="table_col2"><%= "#{@user_name}" %></td>
+          <td class="table_col2"><%= @user.user_name %></td>
         </tr>
         <tr>
           <th class="table_col1">所属</th>
-          <td class="table_col2"><%= "#{@department}" %></td>
+          <td class="table_col2"><%= @user.department %></td>
         </tr>
         <tr>
           <th class="table_col1">ログインID</th>
-          <td class="table_col2"><%= "#{@login_num}" %></td>
+          <td class="table_col2"><%= @user.login_num %></td>
         </tr>
         <tr>
           <th class="table_col1">メールアドレス</th>
-          <td class="table_col2"><%= "#{@email}" %></td>
+          <td class="table_col2"><%= @user.email %></td>
         </tr>
       </tbody>
     </table>
@@ -32,7 +32,7 @@
         <div class = "click-btns">
           <div class = "click-btn">
             <%= image_tag("pen.png", size: '35x35', class: "click-btn-img") %>
-            <%= link_to "編集", edit_user_registration_path(@user.id), method: :get, class: "click-btn-path" %>
+            <%= link_to "編集", edit_user_registration_path(@user), method: :get, class: "click-btn-path" %>
           </div>
           <div class = "click-btn">
             <%= image_tag("trash.png", size: '35x35', class: "click-btn-img") %>

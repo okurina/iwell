@@ -2,7 +2,7 @@
 <%= render "shared/second-header"%>
 
 <div class="new-items-contents">
-  <%= form_with model: @user, id: 'user_edit', url: user_registration_path, local: true do |f| %>
+  <%= form_with(model: @user, id: 'user_edit', local: true) do |f| %>
     <div class="new-items-main">
       <h2 class="new-items-title">ユーザーの情報を編集</h2>
 

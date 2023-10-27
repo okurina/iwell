@@ -16,52 +16,52 @@ RSpec.describe Item, type: :model do
       it 'item_nameが空では保存できない' do
         @item.item_name = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Item nameを入力してください")
+        expect(@item.errors.full_messages).to include("アイテム名を入力してください")
       end
       it 'category_idを選択していないと保存できない' do
         @item.category_id = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("Categoryを選択してください")
+        expect(@item.errors.full_messages).to include("カテゴリーを選択してください")
       end
       it 'category_idで「1」を選択していると保存できない' do
         @item.category_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Categoryを選択してください")
+        expect(@item.errors.full_messages).to include("カテゴリーを選択してください")
       end
       it 'place_idを選択していないと保存できない' do
         @item.place_id = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("Placeを選択してください")
+        expect(@item.errors.full_messages).to include("保管場所を選択してください")
       end
       it 'place_idで「1」を選択していると保存できない' do
         @item.place_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Placeを選択してください")
+        expect(@item.errors.full_messages).to include("保管場所を選択してください")
       end
       it 'quantityが空では保存できない' do
         @item.quantity = ''
         @item.valid?
-        expect(@item.errors.full_messages).to include("Quantityを入力してください")
+        expect(@item.errors.full_messages).to include("数量を入力してください")
       end
       it 'quantityは半角数字でないと保存できない' do
           @item.quantity = '１２３４５６'
           @item.valid?
-          expect(@item.errors.full_messages).to include('Quantityには半角数字を使用してください')
+          expect(@item.errors.full_messages).to include('数量には半角数字を使用してください')
       end
       it 'unit_idを選択していないと保存できない' do
         @item.unit_id = nil
         @item.valid?
-        expect(@item.errors.full_messages).to include("Unitを選択してください")
+        expect(@item.errors.full_messages).to include("単位を選択してください")
       end
       it 'unit_idで「1」を選択していると保存できない' do
         @item.unit_id = 1
         @item.valid?
-        expect(@item.errors.full_messages).to include("Unitを選択してください")
+        expect(@item.errors.full_messages).to include("単位を選択してください")
       end
       it 'priceは半角数字でないと保存できない' do
         @item.price = '１２３４５６'
         @item.valid?
-        expect(@item.errors.full_messages).to include('Priceには半角数字を使用してください')
+        expect(@item.errors.full_messages).to include('価格には半角数字を使用してください')
       end
     end
   end

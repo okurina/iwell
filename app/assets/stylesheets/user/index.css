@@ -17,6 +17,7 @@ a {
 }
 .user-index-titles{
   display: flex;
+  justify-content: space-between;
 }
 
 .user-index-title {
@@ -36,7 +37,7 @@ a {
   font-weight: bold;
   text-align: center;
   color: #666161;
-  margin-left: 80px;
+  margin-right: 80px;
 
 }
 

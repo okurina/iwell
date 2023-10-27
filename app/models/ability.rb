@@ -9,12 +9,14 @@ class Ability
     user ||= User.new
 
     if user.admin?
-      can :manage, :all       # 全ての機能を使えるように設定
+      can :manage, :all
     elsif user.manager?
       can [:read, :update, :create], :all
-      cannot [:create,  :destroy], User
+      can [:read, :update], User, id: user.id
+      cannot [:create, :destroy], User
     else
-      can [:read, :create], :all
+      can [:read, :update, :create, :destroy], :all
+      can [:read, :update], User, id: user.id
       cannot :create, [User, Item]
       cannot :destroy, [User, Item] 
       cannot :update, Item

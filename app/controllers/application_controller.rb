@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :basic_auth
   before_action :configure_permitted_parameters, if: :devise_controller?
-  before_action :check_admin_authorization
   authorize_resource :class => false
 
   rescue_from CanCan::AccessDenied do |_exception|
@@ -9,12 +8,6 @@ class ApplicationController < ActionController::Base
   end
 
   private
-
-  def check_admin_authorization
-    if request.path.start_with?('/admin')
-      authorize! :access_admin_page
-    end
-  end
   
   def basic_auth
     authenticate_or_request_with_http_basic do |username, password|

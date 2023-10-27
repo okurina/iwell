@@ -11,3 +11,20 @@ ja:
       - :year
       - :month
       - :day
+
+  activerecord:
+    attributes:
+      user:
+        user_name: 名前
+        email: メールアドレス
+        department: 所属
+        login_num: ログインID
+
+      item:
+        item_name: アイテム名
+        image: アイテム画像
+        category_id: カテゴリー
+        place_id: 保管場所
+        quantity: 数量
+        unit_id: 単位
+        price: 価格

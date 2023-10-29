@@ -61,8 +61,11 @@ https://docs.google.com/spreadsheets/d/1r0e60KVyboVjorjwwugr1Gl-G9ccoa2YRlznt01y
 * GitHub
 ## ローカルでの動作方法
 以下のコマンドを順に実行
+
 % git clone 
+
 % cd iwell
+
 % bundle install
 ## 工夫したポイント
 * チャット機能を作成し、情報の共有や確認ができるようにした

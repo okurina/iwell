@@ -20,15 +20,16 @@
         <%= image_tag chat.image.variant(resize: '50x50'), class: 'chat-image' if chat.image.attached? %>
       </div>
     </div>
-
-    <div class= "chat-right">
-      <div class= "chat-edit">
-        <%= link_to image_tag("pen.png", size: '25x25'), edit_chat_path(chat), method: :get, class: "chat-btn" %>
+    <% if user_signed_in? && current_user.id == chat.user_id %>
+      <div class= "chat-right">
+        <div class= "chat-edit">
+          <%= link_to image_tag("pen.png", size: '25x25'), edit_chat_path(chat), method: :get, class: "chat-btn" %>
+        </div>
+        <div class= "chat-delete">
+          <%= link_to image_tag("trash.png", size: '25x25'), chat_path(chat), data: { turbo_method: :delete }, class:"chat-btn" %>
+        </div>
       </div>
-      <div class= "chat-delete">
-        <%= link_to image_tag("trash.png", size: '25x25'), chat_path(chat), data: { turbo_method: :delete }, class:"chat-btn" %>
-      </div>
-    </div>
+    <% end %>
   </div>
 
   <div id="like-btn<%= chat.id %>">

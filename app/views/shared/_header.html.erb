@@ -21,7 +21,7 @@
       <ul class ="top-nav">
         <li>
           <% if current_user.admin? || current_user.manager?%>
-            <%= link_to "新規商品登録", new_item_path, class: "nav-list" %>
+            <%= link_to "新規アイテム登録", new_item_path, class: "nav-list" %>
           <% end %>
         </li>
         <li><%= link_to "チャット", chats_path, class: "nav-list" %></li>

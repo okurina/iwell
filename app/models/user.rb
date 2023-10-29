@@ -29,6 +29,10 @@ class User < ApplicationRecord
     result
   end
 
+  def manager?
+    self.manager == true
+  end
+
   has_many :items
   has_many :chats, dependent: :destroy
   has_many :likes

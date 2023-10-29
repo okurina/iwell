@@ -10,7 +10,7 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    like = Like.find_by(chat_id: params[:chat_id], user_id: current_user.id)
+    like = Like.find(chat_id: params[:chat_id], user_id: current_user.id)
     like.destroy
     respond_to do |format|
       format.js

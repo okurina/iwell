@@ -10,10 +10,6 @@ class Ability
 
     if user.admin?
       can :manage, :all
-    elsif user.manager?
-      can [:read, :update, :create], :all
-      can [:read, :update], User, id: user.id
-      cannot [:create, :destroy], User
     else
       can [:read, :update, :create, :destroy], :all
       can [:read, :update], User, id: user.id

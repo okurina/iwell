@@ -58,7 +58,7 @@
     </div>
 
     <div class="item-show-right">
-      <% if current_user.admin? || current_user.manager? %>
+      <% if current_user.admin? %>
         <div class = "click-btns">
           <div class = "click-btn">
             <%= image_tag("pen.png", size: '35x35', class: "click-btn-img") %>

@@ -1,4 +1,4 @@
-<% if current_user.admin? || current_user.manager? %>
+<% if current_user.admin? %>
   <div class="order-list">
     <%= link_to item_order_lists_path(@items), class: 'side-content' do %>
       <span class='side-content-text'>発注リスト</span>

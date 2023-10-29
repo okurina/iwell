@@ -20,7 +20,7 @@
       </div>
       <ul class ="top-nav">
         <li>
-          <% if current_user.admin? || current_user.manager?%>
+          <% if current_user.admin? %>
             <%= link_to "新規アイテム登録", new_item_path, class: "nav-list" %>
           <% end %>
         </li>

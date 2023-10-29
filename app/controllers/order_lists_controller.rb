@@ -14,7 +14,7 @@ class OrderListsController < ApplicationController
   end
 
   def destroy
-    order_list = OrderList.find_by(item_id: params[:item_id], user_id: current_user.id)
+    order_list = OrderList.find(item_id: params[:item_id], user_id: current_user.id)
     order_list.destroy
     respond_to do |format|
       format.js
@@ -22,7 +22,7 @@ class OrderListsController < ApplicationController
   end
 
   def remove_from_list
-    order_list = OrderList.find_by(item_id: params[:item_id], user_id: current_user.id)
+    order_list = OrderList.find(item_id: params[:item_id], user_id: current_user.id)
     order_list.destroy
     respond_to do |format|
       format.js
@@ -30,6 +30,6 @@ class OrderListsController < ApplicationController
   end
 
   def set_list
-    @item = Item.find_by(id: params[:item_id])
+    @item = Item.find(id: params[:item_id])
   end
 end

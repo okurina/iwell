@@ -76,10 +76,6 @@ group :test do
   gem "webdrivers"
 end
 
-group :production do
-  gem 'pg'
-end
-
 gem 'devise'
 gem 'cancancan'
 gem 'mini_magick'
@@ -88,3 +84,7 @@ gem 'active_hash'
 
 gem 'pry-rails'
 gem 'rails-i18n'
+
+group :production do
+  gem 'pg'
+end

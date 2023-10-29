@@ -44,9 +44,7 @@
 
       <div class='login-btn'>
         <%= f.submit "ログイン" ,class:"login--btn" %>
-        <% if User.count.zero? %>
-          <%= link_to "新規登録", new_user_registration_path, class: "new-user-btn" %>
-        <% end %>
+        <%= link_to "新規登録", new_user_registration_path, class: "new-user-btn" %>
       </div>
     </div>
   <% end %>

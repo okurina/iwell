@@ -62,25 +62,6 @@ class Users::RegistrationsController < Devise::RegistrationsController
   before_action :configure_permitted_parameters, only: [:create]
   skip_before_action :require_no_authentication
 
-  def new
-    if current_user.admin?
-      build_resource({})
-      yield resource if block_given?
-      respond_with self.resource
-    else
-      redirect_to root_path
-    end
-  end
-
-  def create
-    if current_user.admin?
-      super
-    else
-      redirect_to root_path
-    end
-  end
-
-  
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:user_name, :department, :login_num])
   end

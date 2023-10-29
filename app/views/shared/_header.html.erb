@@ -19,9 +19,17 @@
         </div>
       </div>
       <ul class ="top-nav">
-        <li><%= link_to "新規商品登録", new_item_path, class: "nav-list" %></li>
+        <li>
+          <% if current_user.admin? || current_user.manager?%>
+            <%= link_to "新規商品登録", new_item_path, class: "nav-list" %>
+          <% end %>
+        </li>
         <li><%= link_to "チャット", chats_path, class: "nav-list" %></li>
-        <li><%= link_to "従業員管理", users_path, class: "nav-list" %></li>
+        <li>
+          <% if current_user.admin? %>
+            <%= link_to "従業員管理", users_path, class: "nav-list" %>
+          <% end %>
+        </li>
         <%= image_tag("icon.png", size: '20x20', class: "icon") %>
         <li id= "username"><%= current_user.user_name %>
           <ul class="user_info", id = "userpulldown">

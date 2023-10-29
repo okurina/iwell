@@ -73,8 +73,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   end
 
   def create
-    if current_user.admin?
+    if User.count == 0
       super
+    elsif current_user.admin?
+      super
+      redirect_to users_path
     else
       redirect_to root_path
     end

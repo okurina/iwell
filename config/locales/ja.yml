@@ -28,3 +28,6 @@ ja:
         quantity: 数量
         unit_id: 単位
         price: 価格
+
+      chat:
+        message: 内容

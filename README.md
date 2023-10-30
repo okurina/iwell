@@ -5,8 +5,8 @@ iWell
 ## URL
 https://iwell.onrender.com
 ## テスト用アカウント
-* Basic認証パスワード：1234
 * Basic認証ID：user
+* Basic認証パスワード：1234
 * メールアドレス：test@test.com
 * パスワード：123456abc
 ## 利用方法
@@ -40,6 +40,7 @@ https://docs.google.com/spreadsheets/d/1r0e60KVyboVjorjwwugr1Gl-G9ccoa2YRlznt01y
 ## 実装予定の機能
 * アラート機能
 * 数量のカウント方法
+* 担当者の権限付与
 * プルダウンの内容編集
 * QRコード作成機能
 ## データベース設計

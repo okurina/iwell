@@ -35,7 +35,7 @@
             <%= link_to "編集", edit_user_registration_path(@user), method: :get, class: "click-btn-path" %>
           </div>
           <% if current_user.admin? %>
-            <div class = "click-btn">
+            <div class = "click-btn" id="del-btn">
               <%= image_tag("trash.png", size: '35x35', class: "click-btn-img") %>
               <%= link_to "削除","/users/#{@user.id}", data: { turbo_method: :delete }, class:"click-btn-path" %>
             </div>

@@ -64,7 +64,7 @@
             <%= image_tag("pen.png", size: '35x35', class: "click-btn-img") %>
             <%= link_to "編集", edit_item_path(@item), method: :get, class: "click-btn-path" %>
           </div>
-          <div class = "click-btn">
+          <div class = "click-btn" id="del-btn">
             <%= image_tag("trash.png", size: '35x35', class: "click-btn-img") %>
             <%= link_to "削除","/items/#{@item.id}", data: { turbo_method: :delete }, class:"click-btn-path" %>
           </div>

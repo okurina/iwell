@@ -3,4 +3,5 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "username"
 import "preview"
+import "delete"
 

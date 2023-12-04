@@ -1,0 +1,8 @@
+<h1>QRコードの印刷</h1>
+<h5> ※在庫品や備品に貼ってご利用ください。読み込むとアイテム編集ページに遷移します</h5>
+
+<p><strong>アイテム名:</strong> <%= @item.item_name %></p>
+
+<%= image_tag @qr_code, alt: 'QR Code', class: 'qr-code-print' %>
+
+<p><%= link_to 'Back to Item', item_path(@item) %></p>

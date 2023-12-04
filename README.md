@@ -38,9 +38,10 @@ https://docs.google.com/spreadsheets/d/1r0e60KVyboVjorjwwugr1Gl-G9ccoa2YRlznt01y
 [![Image from Gyazo](https://i.gyazo.com/c67ae12fa5d5a9b72b59c661740560a0.gif)](https://gyazo.com/c67ae12fa5d5a9b72b59c661740560a0)
 * リストから削除する場合は、発注リスト内の各アイテムの最右にあるカートボタンを押す
 ## 実装予定の機能
-* アラート機能  ※11/9実装完了
+* アラート機能(削除)  ※11/9実装完了
 * 数量のカウント方法  ※12/2実装完了
-* QRコード作成機能
+* QRコード作成機能  ※12/4実装完了
+*アラート機能(在庫減少)
 * 担当者の権限付与
 * プルダウンの内容編集
 ## データベース設計

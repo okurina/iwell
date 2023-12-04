@@ -85,6 +85,8 @@ gem 'active_hash'
 gem 'pry-rails'
 gem 'rails-i18n'
 
+gem 'rqrcode'
+
 group :production do
   gem 'pg'
 end

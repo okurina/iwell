@@ -74,12 +74,22 @@
         </div>
       <% end %>
       <div class = "images">
-        <% if @item.image.present? %>
-          <%= image_tag(@item.image.variant(resize: '300x300'), class: "item-img") %>
-        <% else %>
-           <%= image_tag("no-image.png", size: '300x300', class: "item-img") %>
-        <% end %>
+        <div class = "item-image">
+          <% if @item.image.present? %>
+            <%= image_tag(@item.image.variant(resize: '300x300'), class: "item-img") %>
+          <% else %>
+             <%= image_tag("no-image.png", size: '300x300', class: "item-img") %>
+          <% end %>
+        </div>
+
+        <!-- QRコードを表示 -->
+        <div class = "qr-image">
+          <%= image_tag @qr_code, size: '200x200', alt: 'QR Code' %>
+          <div class = "qr-title"><%=link_to '印刷する',  print_qr_code_item_path %></div>
+
+        </div>
       </div>
+
       <%# 下部ボタン %>
       <div class="main-back-btn"><%=link_to '在庫一覧へもどる', root_path %></div>
       <%# /下部ボタン %>

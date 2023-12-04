@@ -25,6 +25,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @qr_code = generate_qr_code(@item)
   end
 
   def edit
@@ -47,6 +48,11 @@ class ItemsController < ApplicationController
     @items = Item.search(params[:keyword])
   end
 
+  def print_qr_code
+    @item = Item.find(params[:id])
+    @qr_code = generate_qr_code(@item)
+  end
+
   private
 
   def item_params
@@ -62,6 +68,17 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def generate_qr_code(item)
+    size = 10
+  
+    edit_url = edit_item_url(item)
+    qr_data = "Item ID: #{item.id}\nEdit URL: #{edit_url}"
+  
+    qr = RQRCode::QRCode.new(qr_data, level: :h, size: size)
+    png = qr.as_png(resize_gte_to: false, resize_exactly_to: false, fill: 'white', color: 'black', module_px_size: 6)
+    "data:image/png;base64,#{Base64.strict_encode64(png.to_s)}"
   end
 
 end

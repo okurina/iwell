@@ -10,6 +10,9 @@ Rails.application.routes.draw do
         delete :remove_from_list
       end
     end
+    member do
+      get 'print_qr_code'
+    end
     collection do
       get :search
     end

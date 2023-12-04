@@ -3,6 +3,6 @@
 
 <p><strong>アイテム名:</strong> <%= @item.item_name %></p>
 
-<%= image_tag @qr_code, alt: 'QR Code', class: 'qr-code-print' %>
+<%= image_tag @qr_code, alt: 'QR Code', class: 'qr-code-print', size: '300x300' %>
 
-<p><%= link_to 'Back to Item', item_path(@item) %></p>
+<p><%= link_to 'アイテム詳細ページへ戻る', item_path(@item) %></p>

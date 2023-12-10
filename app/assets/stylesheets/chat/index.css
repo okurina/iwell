@@ -142,4 +142,16 @@
   display: none;
 }
 
+/**ipad**/
+@media (max-width: 1024px) {
+  .chat-contents{
+    width: 90vw;
+  }
+  .chat-title {
+    margin: 3vh 3vh;
+  }
+  .chats{
+    width: 70vw;
+  }
 
+}

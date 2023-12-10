@@ -53,9 +53,6 @@
 
 }
 
-
-
-
 .chat-right{
   display: flex;
 }
@@ -66,4 +63,22 @@
 .chat-likes{
   display: flex;
   justify-content: right;
+}
+
+/**ipad**/
+@media (max-width: 1024px) {
+  .order-lists-contents{
+    width: 90vw;
+    padding: 2vh 0;
+  }
+  .order-lists{
+    width: 90vw;
+  }
+  .list-header {
+    font-size: 12px;
+  }
+  .list-body {
+    font-size: 12px;
+  }
+
 }

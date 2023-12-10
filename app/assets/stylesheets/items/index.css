@@ -6,7 +6,7 @@
   position: relative;/*←相対位置*/
 }
 
-/**メイン（在庫一覧）**/
+/**メイン（在庫一覧）(pc)**/
 .main-page {
   width: 70vw;
   padding: 3vh 0;
@@ -55,4 +55,16 @@ a {
 
 .item-table-pen a{
   color: #333333;
+}
+
+
+/**メイン（ipad）**/
+@media (max-width: 1024px) {
+  .main-page {
+    width: 90vw;
+    padding: 2vh 0 0;
+    margin-left: 3vw;
+  }
+
+
 }

@@ -72,3 +72,14 @@ a {
 .user-table-pen a{
   color: #333333;
 }
+
+/**ipad**/
+@media (max-width: 1024px) {  
+  .user-content{
+    width: 90vw;  
+  }
+  .user-table {
+    padding: 0 5vw;
+  }
+
+}

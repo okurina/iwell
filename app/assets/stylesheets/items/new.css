@@ -203,3 +203,19 @@
   padding: 15px;
 
 }
+
+
+/**ipad**/
+@media (max-width: 1024px) {
+  .new-items-main {
+    padding: 5vh 5vw;
+  }
+  .items-form {
+    width: 500px;
+  }
+  .price-input {
+    width: 485px;
+  }
+
+
+}

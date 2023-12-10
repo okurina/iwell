@@ -106,3 +106,24 @@
   font-size: 15px;
 }
 
+/**ipad**/
+@media (max-width: 1024px) {
+  .top-page-header {
+    padding: 1vh 3vw;
+  }
+  .top-logo {
+    margin-right: 0px;
+  }
+  .search-input input{
+    line-height: 20px;
+    width: 15vw;
+  }
+  .top-nav {
+    font-size: 16px;
+  } 
+  .nav-list {
+    margin-right: 15px;
+    padding: 5px;
+  }
+
+}
